@@ -6,10 +6,10 @@ public abstract class Animal {
 
     //ATRIBUTOS
     static ArrayList<Animal> listaAnimales=new ArrayList<>();
-    private String reino;
-    private String tipo;
-    private String raza;
-    private String medio;
+    String reino;
+    String tipo;
+    String raza;
+    String medio;
 
     //CONSTRUCTORES
     /*public Animal(String reino, String tipo, String raza, String medio) {

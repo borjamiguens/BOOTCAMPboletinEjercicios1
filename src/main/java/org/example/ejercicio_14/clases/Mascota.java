@@ -1,6 +1,6 @@
 package org.example.ejercicio_14.clases;
 
-import org.example.ejercicio_09.Animal;
+import org.example.ejercicio_14.clases.Animal;
 
 public class Mascota extends Animal implements Ipropietario {
 
@@ -10,13 +10,19 @@ public class Mascota extends Animal implements Ipropietario {
 
     //CONSTRUCTORES
     public Mascota(String reino, String tipo, String raza, String medio, String nombre, String propietario) {
-        super(reino, tipo, raza, medio);
+        this.reino = reino;
+        this.tipo = tipo;
+        this.raza = raza;
+        this.medio = medio;
         this.nombre = nombre;
         this.propietario=propietario;
     }
 
-    public Mascota(Animal animal, String nombre, String Propietario) {
-        super(animal);
+    public Mascota(Animal animal) {
+        this.reino = reino;
+        this.tipo = tipo;
+        this.raza = raza;
+        this.medio = medio;
         this.nombre = nombre;
         this.propietario=propietario;
     }
@@ -36,5 +42,20 @@ public class Mascota extends Animal implements Ipropietario {
     @Override
     public void setPropietario() {
 
+    }
+    //METODOS A IMPLEMENTAR MAS ABAJO(EN JERARQUIA)
+    @Override
+    void reproducirSonido() {
+
+    }
+
+    @Override
+    void desplazarse() {
+
+    }
+
+    @Override
+    Animal cloneAnimal() {
+        return null;
     }
 }

@@ -1,6 +1,6 @@
 package org.example.ejercicio_14.clases;
 
-import org.example.ejercicio_09.Animal;
+import org.example.ejercicio_14.clases.Animal;
 
 public class AnimalGranja extends Animal implements Ipropietario {
 
@@ -8,16 +8,24 @@ public class AnimalGranja extends Animal implements Ipropietario {
     String propietario;
 
     //CONSTRUCTORES
-    public AnimalGranja(String reino, String tipo, String raza, String medio, String propietario) {
-        super(reino, tipo, raza, medio);
+
+    public AnimalGranja(String reino, String tipo, String raza, String medio,String propietario) {
+        this.reino = reino;
+        this.tipo = tipo;
+        this.raza = raza;
+        this.medio = medio;
         this.propietario=propietario;
     }
 
-    public AnimalGranja(Animal animal, String Propietario) {
-        super(animal);
+    public AnimalGranja(Animal animal) {
+        this.reino=animal.reino;
+        this.tipo = animal.tipo;
+        this.raza = animal.raza;
+        this.medio = animal.medio;
         this.propietario=propietario;
     }
 
+    //METODOS
     @Override
     public String getPropietario() {
         return this.propietario;
@@ -26,5 +34,21 @@ public class AnimalGranja extends Animal implements Ipropietario {
     @Override
     public void setPropietario() {
 
+    }
+
+    //METODOS A IMPLEMENTAR MAS ABAJO(EN JERARQUIA)
+    @Override
+    void reproducirSonido() {
+
+    }
+
+    @Override
+    void desplazarse() {
+
+    }
+
+    @Override
+    Animal cloneAnimal() {
+        return null;
     }
 }
