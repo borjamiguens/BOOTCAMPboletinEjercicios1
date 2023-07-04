@@ -2,7 +2,7 @@ package org.example.ejercicio_14.clases;
 
 import org.example.ejercicio_14.clases.Animal;
 
-public class Mascota extends Animal implements Ipropietario {
+public abstract class Mascota extends Animal implements Ipropietario {
 
     //ATRIBUTOS
     private String nombre;
@@ -43,19 +43,5 @@ public class Mascota extends Animal implements Ipropietario {
     public void setPropietario() {
 
     }
-    //METODOS A IMPLEMENTAR MAS ABAJO(EN JERARQUIA)
-    @Override
-    void reproducirSonido() {
 
-    }
-
-    @Override
-    void desplazarse() {
-
-    }
-
-    @Override
-    Animal cloneAnimal() {
-        return null;
-    }
 }

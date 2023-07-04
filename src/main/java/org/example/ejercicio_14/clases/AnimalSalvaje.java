@@ -2,7 +2,7 @@ package org.example.ejercicio_14.clases;
 
 import org.example.ejercicio_14.clases.Animal;
 
-public class AnimalSalvaje extends Animal {
+public abstract class AnimalSalvaje extends Animal {
 
     //CONSTRUCTORES
     public AnimalSalvaje(String reino, String tipo, String raza, String medio) {
@@ -19,19 +19,5 @@ public class AnimalSalvaje extends Animal {
         this.medio = animal.medio;
     }
 
-    //METODOS A IMPLEMENTAR MAS ABAJO(EN JERARQUIA)
-    @Override
-    void reproducirSonido() {
 
-    }
-
-    @Override
-    void desplazarse() {
-
-    }
-
-    @Override
-    Animal cloneAnimal() {
-        return null;
-    }
 }

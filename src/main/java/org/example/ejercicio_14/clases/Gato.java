@@ -1,6 +1,6 @@
 package org.example.ejercicio_14.clases;
 
-import org.example.ejercicio_09.Animal;
+
 
 public class Gato extends Mascota {
 
@@ -9,7 +9,24 @@ public class Gato extends Mascota {
         super(reino, tipo, raza, medio, nombre, propietario);
     }
 
-    public Gato(Animal animal, String nombre, String Propietario) {
-        super(animal, nombre, Propietario);
+    public Gato(Animal animal) {
+        super(animal);
+    }
+
+
+    //METODOS A IMPLEMENTAR MAS ABAJO(EN JERARQUIA)
+    @Override
+    void reproducirSonido() {
+
+    }
+
+    @Override
+    void desplazarse() {
+
+    }
+
+    @Override
+    org.example.ejercicio_14.clases.Animal cloneAnimal() {
+        return null;
     }
 }
