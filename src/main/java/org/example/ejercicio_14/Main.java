@@ -1,15 +1,16 @@
 package org.example.ejercicio_14;
 
-import org.example.ejercicio_09.Animal;
+import org.example.ejercicio_14.clases.*;
 
 public class Main {
     public static void main(String[] args) {
 
-        Animal perro1= new Animal("mamifero","perro","bulldog","terrestre");
-        Animal gato1= new Animal("mamifero","gato","angora","terrestre");
-        Animal gaviota1= new Animal("ave","gaviota","atlantica","aereo");
+        Perro perro1= new Perro("mamifero","perro","bulldog","terrestre","Josh","Joaquín");
+        Animal gato1= new Gato("mamifero","gato","angora","terrestre","Micho","Andrea");
+        Animal tucan1= new Tucan("ave","gaviota","atlantica","aereo");
+        Animal pezPayaso1= new Tucan("ave","gaviota","atlantica","aereo");
 
-        Animal.listaAnimales.add(perro1);
+        Animal.add(perro1);
         Animal.listaAnimales.add(gato1);
         Animal.listaAnimales.add(gaviota1);
 
