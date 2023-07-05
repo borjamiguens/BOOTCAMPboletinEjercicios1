@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public abstract class AnimalSalvaje extends Animal {
 
-    public static ArrayList<Animal> listaAnimalesGranja = new ArrayList<>();
+    public static ArrayList<Animal> listaAnimalesSalvajes = new ArrayList<>();
 
     //CONSTRUCTORES
     /*public AnimalSalvaje(String reino, String tipo, String raza, String medio) {
