@@ -7,12 +7,12 @@ import java.util.ArrayList;
 public abstract class Animal implements ISexual {
 
     //ATRIBUTOS
-    public static ArrayList<org.example.ejercicio_14_16.clases.Animal> listaAnimales = new ArrayList<>();
-    Enum reino;
-    Enum tipo;
-    String raza;
-    Enum medio;
-    Enum sexo;
+    public static ArrayList<Animal> listaAnimales = new ArrayList<>();
+    protected Enum reino;
+    protected Enum tipo;
+    protected String raza;
+    protected Enum medio;
+    protected Enum sexo;
 
     //CONSTRUCTORES
     /*public Animal(String reino, String tipo, String raza, String medio) {
@@ -30,9 +30,9 @@ public abstract class Animal implements ISexual {
     }*/
 
     //METODOS
-    abstract void reproducirSonido();
+    protected abstract void reproducirSonido();
 
-    abstract void desplazarse();
+    protected abstract void desplazarse();
 
     @Override
     public String toString() {
@@ -44,7 +44,7 @@ public abstract class Animal implements ISexual {
                 '}';
     }
 
-    abstract org.example.ejercicio_14_16.clases.Animal cloneAnimal();
+    //protected abstract Animal cloneAnimal();
 
     @Override
     protected Object clone() throws CloneNotSupportedException {

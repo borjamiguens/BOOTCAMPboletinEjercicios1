@@ -1,6 +1,8 @@
 package org.example.ejercicio_14_16.clases;
 
 
+import org.example.ejercicio_13.Animal;
+
 public class Gato extends Mascota {
 
     //CONSTRUCTORES
@@ -44,22 +46,15 @@ public class Gato extends Mascota {
 
     //METODOS A IMPLEMENTAR MAS ABAJO(EN JERARQUIA)
     @Override
-    void reproducirSonido() {
+    public void reproducirSonido() {
         System.out.println("miau");
     }
 
     @Override
-    void desplazarse() {
+    public void desplazarse() {
         System.out.println("camina");
     }
 
-    @Override
-    Animal cloneAnimal() {
-        Gato newGato=new Gato(this.raza, this.nombre, this.propietario);
-        newGato.sexo=this.sexo;
-        return newGato;
-
-    }
 
     @Override
     public void setSexo(Enum sexo) {
@@ -77,4 +72,11 @@ public class Gato extends Mascota {
                 ", Propietario='" + propietario + '\'' +
                 '}';
     }
+
+    /*@Override
+    Animal cloneAnimal() {
+        Gato newGato=new Gato(this.raza, this.nombre, this.propietario);
+        newGato.sexo=this.sexo;
+        return newGato;
+    }*/
 }

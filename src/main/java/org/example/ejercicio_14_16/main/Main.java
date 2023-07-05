@@ -1,13 +1,15 @@
 package org.example.ejercicio_14_16.main;
 
+import org.example.ejercicio_13.Animal;
 import org.example.ejercicio_14_16.clases.*;
 
 import java.util.ArrayList;
 
-import static org.example.ejercicio_14_16.clases.Animal.listaAnimales;
-import static org.example.ejercicio_15.clases.AnimalGranja.listaAnimalesGranja;
-import static org.example.ejercicio_15.clases.AnimalSalvaje.listaAnimalesSalvajes;
-import static org.example.ejercicio_15.clases.Mascota.listaMascotas;
+import static org.example.ejercicio_13.Animal.listaAnimales;
+import static org.example.ejercicio_13.Animal.listaAnimales;
+import static org.example.ejercicio_14_16.clases.AnimalGranja.listaAnimalesGranja;
+import static org.example.ejercicio_14_16.clases.AnimalSalvaje.listaAnimalesSalvajes;
+import static org.example.ejercicio_14_16.clases.Mascota.listaMascotas;
 
 
 public class Main {
@@ -46,7 +48,7 @@ public class Main {
         vaca2.setSexo(Sexo.HEMBRA);
 
         //EJERCICIO_15
-        for (org.example.ejercicio_15.clases.Animal e : org.example.ejercicio_15.clases.Animal.listaAnimales) {
+       /* for (Animal e : listaAnimales) {
             if (e.getClass().toString().contains("Perro") || e.getClass().toString().contains("Gato")) {
                 listaMascotas.add(e);
             }
@@ -58,7 +60,7 @@ public class Main {
             }
         }
 
-        for (org.example.ejercicio_15.clases.Animal e : listaMascotas) {
+        for (Animal e : listaMascotas) {
             System.out.println(e.toString());
         }
         for (org.example.ejercicio_15.clases.Animal e : listaAnimalesSalvajes) {
@@ -66,7 +68,7 @@ public class Main {
         }
         for (org.example.ejercicio_15.clases.Animal e : listaAnimalesGranja) {
             System.out.println(e.toString());
-        }
+        }*/
         //FIN_EJ_15
 
 

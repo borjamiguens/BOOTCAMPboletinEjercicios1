@@ -1,6 +1,8 @@
 package org.example.ejercicio_14_16.clases;
 
 
+import org.example.ejercicio_13.Animal;
+
 public class Perro extends Mascota {
 
     //CONSTRUCTORES
@@ -43,21 +45,21 @@ public class Perro extends Mascota {
 
     //METODOS A IMPLEMENTAR MAS ABAJO(EN JERARQUIA)
     @Override
-    void reproducirSonido() {
+    public void reproducirSonido() {
         System.out.println("guau");
     }
 
     @Override
-    void desplazarse() {
+    public void desplazarse() {
         System.out.println("camina");
     }
 
-    @Override
+    /*@Override
     Animal cloneAnimal() {
         Perro newPerro=new Perro(this.raza, this.nombre, this.propietario);
         newPerro.sexo=this.sexo;
         return newPerro;
-    }
+    }*/
 
 
 

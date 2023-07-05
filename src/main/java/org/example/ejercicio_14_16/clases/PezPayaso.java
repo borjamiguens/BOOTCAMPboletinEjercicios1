@@ -1,6 +1,8 @@
 package org.example.ejercicio_14_16.clases;
 
 
+import org.example.ejercicio_13.Animal;
+
 public class PezPayaso extends AnimalSalvaje {
 
     //CONSTRUCTORES
@@ -27,21 +29,21 @@ public class PezPayaso extends AnimalSalvaje {
 
     //METODOS A IMPLEMENTAR MAS ABAJO(EN JERARQUIA)
     @Override
-    void reproducirSonido() {
+    public void reproducirSonido() {
         System.out.println("inaudible");
     }
 
     @Override
-    void desplazarse() {
+    public void desplazarse() {
         System.out.println("nada");
     }
 
-    @Override
+    /*@Override
     Animal cloneAnimal() {
         PezPayaso newPezPayaso=new PezPayaso(this.raza);
         newPezPayaso.sexo=this.sexo;
         return newPezPayaso;
-    }
+    }*/
 
     @Override
     public void setSexo(Enum sexo) {

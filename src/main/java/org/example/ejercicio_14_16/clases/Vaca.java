@@ -1,6 +1,8 @@
 package org.example.ejercicio_14_16.clases;
 
 
+import org.example.ejercicio_13.Animal;
+
 public class Vaca extends AnimalGranja {
 
     //CONSTRUCTORES
@@ -30,21 +32,21 @@ public class Vaca extends AnimalGranja {
 
     //METODOS A IMPLEMENTAR MAS ABAJO(EN JERARQUIA)
     @Override
-    void reproducirSonido() {
+    public void reproducirSonido() {
         System.out.println("muuuuuu");
     }
 
     @Override
-    void desplazarse() {
+    public void desplazarse() {
         System.out.println("camina");
     }
 
-    @Override
+    /*@Override
     Animal cloneAnimal() {
         Vaca newVaca=new Vaca(this.raza, this.propietario);
         newVaca.sexo=this.sexo;
         return newVaca;
-    }
+    }*/
 
     @Override
     public void setSexo(Enum sexo) {

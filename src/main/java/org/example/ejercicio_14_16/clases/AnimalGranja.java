@@ -1,5 +1,7 @@
 package org.example.ejercicio_14_16.clases;
 
+import org.example.ejercicio_13.Animal;
+
 import java.util.ArrayList;
 
 public abstract class AnimalGranja extends Animal implements IPropietario {
@@ -38,4 +40,5 @@ public abstract class AnimalGranja extends Animal implements IPropietario {
 
     }
 
+    //public abstract Animal cloneAnimal();
 }

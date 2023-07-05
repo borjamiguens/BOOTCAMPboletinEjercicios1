@@ -1,6 +1,8 @@
 package org.example.ejercicio_14_16.clases;
 
 
+import org.example.ejercicio_13.Animal;
+
 public class Tucan extends AnimalSalvaje {
 
     //CONSTRUCTORES
@@ -28,21 +30,21 @@ public class Tucan extends AnimalSalvaje {
 
     //METODOS A IMPLEMENTAR MAS ABAJO(EN JERARQUIA)
     @Override
-    void reproducirSonido() {
+    public void reproducirSonido() {
         System.out.println("graznido");
     }
 
     @Override
-    void desplazarse() {
+    public void desplazarse() {
         System.out.println("vuela");
     }
 
-    @Override
+    /*@Override
     Animal cloneAnimal() {
         Tucan newTucan=new Tucan(this.raza);
         newTucan.sexo=this.sexo;
         return newTucan;
-    }
+    }*/
 
     @Override
     public void setSexo(Enum sexo) {
