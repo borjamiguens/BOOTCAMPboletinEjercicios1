@@ -101,7 +101,7 @@ public class Main {
         do {
 
             //realizar una copia de la tabla
-            ArrayList<Animal> listaAnimalesCopia = new ArrayList<>();
+            ArrayList<Animal> listaAnimalesCria = new ArrayList<>();
             for (int i = listaAnimales.size() - 1; i >= 0; i--) {//para cada elemento
                 //para cada animal de la lista vamos a buscar en el resto de posiciones
                 //animales suitables para tener hijos, misma clase y distinto sexo
@@ -111,7 +111,8 @@ public class Main {
                         //System.out.println("animal suitable para procrear" + listaAnimales.get(i).toString() + " con " + listaAnimales.get(j).toString());
 
                         if (listaAnimales.get(i).getTipo().equals(Tipo.PERRO)) {
-                            if (((Mascota) listaAnimales.get(i)).getNombre() == "Chucha") {
+                            listaAnimalesCria.add(new Perro());//un perro macho tendra un hijo con cada perra(2)
+                            /*if (((Mascota) listaAnimales.get(i)).getNombre() == "Chucha") {
                                 Perro perro11 = new Perro("bulldog", "Chuchin", "Joaquín");
                                 perro11.setSexo(Sexo.MACHO);
                                 listaAnimalesCopia.add(perro11);
@@ -121,31 +122,36 @@ public class Main {
                                 perro12.setSexo(Sexo.HEMBRA);
                                 listaAnimalesCopia.add(perro12);
                                 listaAnimalesCopia.add(new Perro());
-
-                            }
-                        }else if (listaAnimales.get(i).getTipo().equals(Tipo.GATO)) {
-                                listaAnimalesCopia.add(new Gato());
-                            } else if (listaAnimales.get(i).getTipo().equals(Tipo.TUCAN)) {
-                                listaAnimalesCopia.add(new Tucan());
-                            } else if (listaAnimales.get(i).getTipo().equals(Tipo.PEZ_PAYASO)) {
-                                listaAnimalesCopia.add(new PezPayaso());
-                            } else if (listaAnimales.get(i).getTipo().equals(Tipo.OVEJA)) {
-                                listaAnimalesCopia.add(new Oveja());
-                            } else if (listaAnimales.get(i).getTipo().equals(Tipo.VACA)) {
-                                listaAnimalesCopia.add(new Vaca());
-                            }
+                            }*/
+                        } else if (listaAnimales.get(i).getTipo().equals(Tipo.GATO)) {
+                            listaAnimalesCria.add(new Gato());
+                        } else if (listaAnimales.get(i).getTipo().equals(Tipo.TUCAN)) {
+                            listaAnimalesCria.add(new Tucan());
+                        } else if (listaAnimales.get(i).getTipo().equals(Tipo.PEZ_PAYASO)) {
+                            listaAnimalesCria.add(new PezPayaso());
+                        } else if (listaAnimales.get(i).getTipo().equals(Tipo.OVEJA)) {
+                            listaAnimalesCria.add(new Oveja());
+                        } else if (listaAnimales.get(i).getTipo().equals(Tipo.VACA)) {
+                            listaAnimalesCria.add(new Vaca());
                         }
-                        /*listaAnimales.add(new Perro());*/
                     }
-                    //al finalizar el for volcar los datos generados a la tabla original
+                    /*listaAnimales.add(new Perro());*/
                 }
-                for (Animal e : listaAnimalesCopia) {
-                    System.out.println(e.toString());
-                }
+                //al finalizar el for volcar los datos generados a la tabla original
+            }
+            /*for (Animal e : listaAnimalesCopia) {
+                System.out.println(e.toString());
+            }*/
+            for (Animal e : listaAnimalesCria) {//añado las crias a la listaAnimales
+                listaAnimales.add(e);
+            }
+            for (Animal e : listaAnimales) {
+                System.out.println(e.getTipo());
+            }
 
 
-        }while (false) ;/*"mientras el numero de animales sea distinto al bucle anterior*/
+        } while (false);/*"mientras el numero de animales sea distinto al bucle anterior*/
 
-        }
     }
+}
 

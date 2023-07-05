@@ -41,13 +41,13 @@ public class Oveja extends AnimalGranja {
         System.out.println("camina");
     }
 
-    /*@Override
-    public Animal cloneAnimal() {
-
+    @Override
+    protected Animal cloneAnimal() {
         Oveja newOveja=new Oveja(this.raza, this.propietario);
         newOveja.sexo=this.sexo;
         return newOveja;
-    }*/
+    }
+
 
     @Override
     public void setSexo(Enum sexo) {

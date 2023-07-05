@@ -55,6 +55,13 @@ public class Gato extends Mascota {
         System.out.println("camina");
     }
 
+    @Override
+    protected Animal cloneAnimal() {
+        Gato newGato=new Gato(this.raza, this.nombre, this.propietario);
+        newGato.sexo=this.sexo;
+        return newGato;
+    }
+
 
     @Override
     public void setSexo(Enum sexo) {

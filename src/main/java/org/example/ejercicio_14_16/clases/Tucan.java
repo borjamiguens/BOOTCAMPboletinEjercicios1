@@ -39,12 +39,13 @@ public class Tucan extends AnimalSalvaje {
         System.out.println("vuela");
     }
 
-    /*@Override
-    Animal cloneAnimal() {
+    @Override
+    protected Animal cloneAnimal() {
         Tucan newTucan=new Tucan(this.raza);
         newTucan.sexo=this.sexo;
         return newTucan;
-    }*/
+    }
+
 
     @Override
     public void setSexo(Enum sexo) {

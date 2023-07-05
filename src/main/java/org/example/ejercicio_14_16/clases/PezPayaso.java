@@ -38,12 +38,13 @@ public class PezPayaso extends AnimalSalvaje {
         System.out.println("nada");
     }
 
-    /*@Override
-    Animal cloneAnimal() {
+    @Override
+    protected Animal cloneAnimal() {
         PezPayaso newPezPayaso=new PezPayaso(this.raza);
         newPezPayaso.sexo=this.sexo;
         return newPezPayaso;
-    }*/
+    }
+
 
     @Override
     public void setSexo(Enum sexo) {

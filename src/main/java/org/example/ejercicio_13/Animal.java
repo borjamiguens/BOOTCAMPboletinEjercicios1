@@ -34,6 +34,8 @@ public abstract class Animal implements ISexual {
 
     protected abstract void desplazarse();
 
+    protected abstract Animal cloneAnimal();
+
     @Override
     public String toString() {
         return "Animal{" +
@@ -44,7 +46,7 @@ public abstract class Animal implements ISexual {
                 '}';
     }
 
-    //protected abstract Animal cloneAnimal();
+
 
     @Override
     protected Object clone() throws CloneNotSupportedException {

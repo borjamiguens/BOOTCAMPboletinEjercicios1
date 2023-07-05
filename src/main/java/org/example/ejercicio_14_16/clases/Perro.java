@@ -54,14 +54,12 @@ public class Perro extends Mascota {
         System.out.println("camina");
     }
 
-    /*@Override
-    Animal cloneAnimal() {
+    @Override
+    protected Animal cloneAnimal() {
         Perro newPerro=new Perro(this.raza, this.nombre, this.propietario);
         newPerro.sexo=this.sexo;
         return newPerro;
-    }*/
-
-
+    }
 
 
     @Override
