@@ -37,4 +37,9 @@ public class Perro extends Mascota {
     Animal cloneAnimal() {
         return new Perro(this.reino, this.tipo, this.raza, this.medio, this.nombre, this.propietario);
     }
+
+    @Override
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
 }

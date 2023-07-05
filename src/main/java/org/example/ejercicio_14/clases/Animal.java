@@ -2,14 +2,15 @@ package org.example.ejercicio_14.clases;
 
 import java.util.ArrayList;
 
-public abstract class Animal {
+public abstract class Animal implements ISexual{
 
     //ATRIBUTOS
-    static ArrayList<Animal> listaAnimales = new ArrayList<>();
+    public static ArrayList<Animal> listaAnimales = new ArrayList<>();
     String reino;
     String tipo;
     String raza;
     String medio;
+    String sexo="";
 
     //CONSTRUCTORES
     /*public Animal(String reino, String tipo, String raza, String medio) {

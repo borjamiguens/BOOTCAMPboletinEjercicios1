@@ -38,4 +38,9 @@ public class Gato extends Mascota {
     org.example.ejercicio_14.clases.Animal cloneAnimal() {
         return new Gato(this.reino, this.tipo, this.raza, this.medio, this.nombre, this.propietario);
     }
+
+    @Override
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
 }

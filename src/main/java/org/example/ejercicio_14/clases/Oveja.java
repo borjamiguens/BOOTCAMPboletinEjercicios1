@@ -35,6 +35,11 @@ public class Oveja extends AnimalGranja {
     Animal cloneAnimal() {
         return new Oveja(this.reino, this.tipo, this.raza, this.medio, this.propietario);
     }
+
+    @Override
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
 }
 
 

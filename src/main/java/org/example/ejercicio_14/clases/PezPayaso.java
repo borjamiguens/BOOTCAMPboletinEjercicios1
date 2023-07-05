@@ -35,4 +35,9 @@ public class PezPayaso extends AnimalSalvaje {
     org.example.ejercicio_14.clases.Animal cloneAnimal() {
         return new PezPayaso(this.reino, this.tipo, this.raza, this.medio);
     }
+
+    @Override
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
 }

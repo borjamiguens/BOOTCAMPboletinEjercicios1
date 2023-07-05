@@ -1,8 +1,6 @@
 package org.example.ejercicio_14.clases;
 
-import org.example.ejercicio_14.clases.Animal;
-
-public abstract class AnimalGranja extends Animal implements Ipropietario {
+public abstract class AnimalGranja extends Animal implements IPropietario {
 
     //ATRIBUTOS
     String propietario;

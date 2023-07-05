@@ -36,5 +36,8 @@ public class Tucan extends AnimalSalvaje {
         return new Tucan(this.reino, this.tipo, this.raza, this.medio);
     }
 
-
+    @Override
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
 }

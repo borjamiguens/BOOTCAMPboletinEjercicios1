@@ -1,6 +1,6 @@
 package org.example.ejercicio_14.clases;
 
-public interface Ipropietario {
+public interface IPropietario {
     String getPropietario();
     void setPropietario();
 

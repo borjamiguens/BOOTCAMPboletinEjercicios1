@@ -36,4 +36,9 @@ public class Vaca extends AnimalGranja {
         return new Vaca(this.reino, this.tipo, this.raza, this.medio, this.propietario);
     }
 
+    @Override
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+
 }
