@@ -17,12 +17,12 @@ public class Main {
 
         Perro perro1 = new Perro("bulldog", "Chucho", "Joaquín");
         perro1.setSexo(Sexo.MACHO);
-        Perro perro2 = new Perro("bulldog","Chucha", "Felipe");
+        Perro perro2 = new Perro("bulldog", "Chucha", "Felipe");
         perro2.setSexo(Sexo.HEMBRA);
         Perro perro3 = new Perro("bulldog", "Chuchona", "Carlos");
         perro3.setSexo(Sexo.HEMBRA);
 
-        Gato gato1 = new Gato("angora","Micho", "Andrea");
+        Gato gato1 = new Gato("angora", "Micho", "Andrea");
         gato1.setSexo(Sexo.MACHO);
         Gato gato2 = new Gato("angora", "Micha", "Susana");
         gato2.setSexo(Sexo.HEMBRA);
@@ -37,42 +37,15 @@ public class Main {
         PezPayaso pezPayaso2 = new PezPayaso("comun");
         pezPayaso2.setSexo(Sexo.HEMBRA);
 
-        Oveja oveja1 = new Oveja("churra","Serafín");
+        Oveja oveja1 = new Oveja("churra", "Serafín");
         oveja1.setSexo(Sexo.MACHO);
-        Oveja oveja2 = new Oveja("churra","Serafín");
+        Oveja oveja2 = new Oveja("churra", "Serafín");
         oveja2.setSexo(Sexo.HEMBRA);
 
-        Vaca vaca1 = new Vaca("rubia","Laureano");
+        Vaca vaca1 = new Vaca("rubia", "Laureano");
         vaca1.setSexo(Sexo.MACHO);
-        Vaca vaca2 = new Vaca("rubia","Laureano");
+        Vaca vaca2 = new Vaca("rubia", "Laureano");
         vaca2.setSexo(Sexo.HEMBRA);
-
-        //EJERCICIO_15
-       /* for (Animal e : listaAnimales) {
-            if (e.getClass().toString().contains("Perro") || e.getClass().toString().contains("Gato")) {
-                listaMascotas.add(e);
-            }
-            if (e.getClass().toString().contains("Tucan") || e.getClass().toString().contains("PezPayaso")) {
-                listaAnimalesSalvajes.add(e);
-            }
-            if (e.getClass().toString().contains("Oveja") || e.getClass().toString().contains("Vaca")) {
-                listaAnimalesGranja.add(e);
-            }
-        }
-
-        for (Animal e : listaMascotas) {
-            System.out.println(e.toString());
-        }
-        for (org.example.ejercicio_15.clases.Animal e : listaAnimalesSalvajes) {
-            System.out.println(e.toString());
-        }
-        for (org.example.ejercicio_15.clases.Animal e : listaAnimalesGranja) {
-            System.out.println(e.toString());
-        }*/
-        //FIN_EJ_15
-
-
-
 
         listaAnimales.add(perro1);
         listaAnimales.add(perro2);
@@ -93,61 +66,86 @@ public class Main {
         listaAnimales.add(vaca1);
         listaAnimales.add(vaca2);
 
+        //EJERCICIO_15
+
+        /*for (Animal e : listaAnimales) {
+            System.out.println(e.toString());
+        }*/
+
+        for (Animal e : listaAnimales) {
+            if (e.getClass().toString().contains("Perro") || e.getClass().toString().contains("Gato")) {
+                listaMascotas.add(e);
+            }
+            if (e.getClass().toString().contains("Tucan") || e.getClass().toString().contains("PezPayaso")) {
+                listaAnimalesSalvajes.add(e);
+            }
+            if (e.getClass().toString().contains("Oveja") || e.getClass().toString().contains("Vaca")) {
+                listaAnimalesGranja.add(e);
+            }
+        }
+
+        /*for (Animal e : listaMascotas) {
+            System.out.println(e.toString());
+        }*/
+        /*for (Animal e : listaAnimalesSalvajes) {
+            System.out.println(e.toString());
+        }*/
+        /*for (Animal e : listaAnimalesGranja) {
+            System.out.println(e.toString());
+        }*/
+        //FIN_EJ_15
+
 
         //iterar hasta que el numero de animales deje de crecer
 
         do {
 
             //realizar una copia de la tabla
-            ArrayList<Animal> listaAnimalesCopia=new ArrayList<>();
+            ArrayList<Animal> listaAnimalesCopia = new ArrayList<>();
             for (int i = listaAnimales.size() - 1; i >= 0; i--) {//para cada elemento
                 //para cada animal de la lista vamos a buscar en el resto de posiciones
                 //animales suitables para tener hijos, misma clase y distinto sexo
 
                 for (int j = i - 1; j >= 0; j--) {//comprobar combinaciones
-                    if ((   (listaAnimales.get(i)).getClass() == listaAnimales.get(j).getClass()) && (listaAnimales.get(i).getSexo() != listaAnimales.get(j).getSexo())) {
+                    if (((listaAnimales.get(i)).getClass() == listaAnimales.get(j).getClass()) && (listaAnimales.get(i).getSexo() != listaAnimales.get(j).getSexo())) {
                         //System.out.println("animal suitable para procrear" + listaAnimales.get(i).toString() + " con " + listaAnimales.get(j).toString());
 
-                        switch (listaAnimales.get(i).getTipo().toString()) {
-                            case "perro":
-                                if(((Mascota) listaAnimales.get(i)).getNombre()=="Chucha"){
-                                    Perro perro11=new Perro("bulldog", "Chuchin", "Joaquín");
-                                    perro11.setSexo(Sexo.MACHO);
-                                    listaAnimalesCopia.add(perro11);
-                                }
+                        if (listaAnimales.get(i).getTipo().equals(Tipo.PERRO)) {
+                            if (((Mascota) listaAnimales.get(i)).getNombre() == "Chucha") {
+                                Perro perro11 = new Perro("bulldog", "Chuchin", "Joaquín");
+                                perro11.setSexo(Sexo.MACHO);
+                                listaAnimalesCopia.add(perro11);
+                            }
+                            if (((Mascota) listaAnimales.get(i)).getNombre() == "Chuchona") {
+                                Perro perro12 = new Perro("bulldog", "Chuchina", "Joaquín");
+                                perro12.setSexo(Sexo.HEMBRA);
+                                listaAnimalesCopia.add(perro12);
+                                listaAnimalesCopia.add(new Perro());
 
-                                if(((Mascota) listaAnimales.get(i)).getNombre()=="Chuchona") {
-                                    Perro perro12=new Perro("bulldog", "Chuchina", "Joaquín");
-                                    perro12.setSexo(Sexo.HEMBRA);
-                                    listaAnimalesCopia.add(perro12);
-                                }
-                                break;
-                            case "gato":
+                            }
+                        }else if (listaAnimales.get(i).getTipo().equals(Tipo.GATO)) {
                                 listaAnimalesCopia.add(new Gato());
-                                break;
-                            case "tucan":
+                            } else if (listaAnimales.get(i).getTipo().equals(Tipo.TUCAN)) {
                                 listaAnimalesCopia.add(new Tucan());
-                                break;
-                            case "pezPayaso":
+                            } else if (listaAnimales.get(i).getTipo().equals(Tipo.PEZ_PAYASO)) {
                                 listaAnimalesCopia.add(new PezPayaso());
-                                break;
-                            case "oveja":
+                            } else if (listaAnimales.get(i).getTipo().equals(Tipo.OVEJA)) {
                                 listaAnimalesCopia.add(new Oveja());
-                                break;
-                            case "vaca":
+                            } else if (listaAnimales.get(i).getTipo().equals(Tipo.VACA)) {
                                 listaAnimalesCopia.add(new Vaca());
-                                break;
+                            }
                         }
+                        /*listaAnimales.add(new Perro());*/
                     }
-                    /*listaAnimales.add(new Perro());*/
+                    //al finalizar el for volcar los datos generados a la tabla original
                 }
-                //al finalizar el for volcar los datos generados a la tabla original
-            }
-            for (Animal e : listaAnimalesCopia) {
-                System.out.println(e.toString());
-            }
+                for (Animal e : listaAnimalesCopia) {
+                    System.out.println(e.toString());
+                }
 
-        } while (false);/*"mientras el numero de animales sea distinto al bucle anterior*/
 
+        }while (false) ;/*"mientras el numero de animales sea distinto al bucle anterior*/
+
+        }
     }
-}
+

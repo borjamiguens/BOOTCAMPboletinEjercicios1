@@ -78,6 +78,6 @@ public class Perro extends Mascota {
 
     @Override
     public void setSexo(Enum sexo) {
-
+        this.sexo=sexo;
     }
 }
