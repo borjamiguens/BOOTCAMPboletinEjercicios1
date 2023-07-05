@@ -4,6 +4,13 @@ package org.example.ejercicio_16.clases;
 public class PezPayaso extends AnimalSalvaje {
 
     //CONSTRUCTORES
+    public PezPayaso() {
+        this.reino = "";
+        this.tipo = "";
+        this.raza = "";
+        this.medio = "";
+    }
+
     public PezPayaso(String reino, String tipo, String raza, String medio) {
         this.reino = reino;
         this.tipo = tipo;

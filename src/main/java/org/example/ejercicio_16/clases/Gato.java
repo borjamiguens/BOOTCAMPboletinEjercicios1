@@ -4,6 +4,16 @@ package org.example.ejercicio_16.clases;
 public class Gato extends Mascota {
 
     //CONSTRUCTORES
+
+    public Gato() {
+        this.reino = "";
+        this.tipo = "";
+        this.raza = "";
+        this.medio = "";
+        this.nombre = "";
+        this.propietario = "";
+    }
+
     public Gato(String reino, String tipo, String raza, String medio, String nombre, String propietario) {
         this.reino = reino;
         this.tipo = tipo;

@@ -4,6 +4,14 @@ package org.example.ejercicio_16.clases;
 public class Vaca extends AnimalGranja {
 
     //CONSTRUCTORES
+    public Vaca() {
+        this.reino = "";
+        this.tipo = "";
+        this.raza = "";
+        this.medio = "";
+        this.propietario = "";
+    }
+
     public Vaca(String reino, String tipo, String raza, String medio, String propietario) {
         this.reino = reino;
         this.tipo = tipo;

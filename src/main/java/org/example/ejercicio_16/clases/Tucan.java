@@ -4,6 +4,14 @@ package org.example.ejercicio_16.clases;
 public class Tucan extends AnimalSalvaje {
 
     //CONSTRUCTORES
+
+    public Tucan() {
+        this.reino = "";
+        this.tipo = "";
+        this.raza = "";
+        this.medio = "";
+    }
+
     public Tucan(String reino, String tipo, String raza, String medio) {
         this.reino = reino;
         this.tipo = tipo;

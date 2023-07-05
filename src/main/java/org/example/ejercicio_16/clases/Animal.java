@@ -66,4 +66,8 @@ public abstract class Animal implements ISexual {
     public String getMedio() {
         return medio;
     }
+
+    public String getSexo() {
+        return sexo;
+    }
 }
