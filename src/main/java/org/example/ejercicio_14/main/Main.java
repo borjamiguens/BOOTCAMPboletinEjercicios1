@@ -55,11 +55,11 @@ public class Main {
         /*Animal perro2=new Animal(perro1);
         Animal perro3=perro1.cloneAnimal();
         listaAnimales.add(perro2);
-        listaAnimales.add(perro3);
+        listaAnimales.add(perro3);*/
 
         for(Animal e : listaAnimales){
             System.out.println(e.toString());
-        }*/
+        }
 
     }
 }

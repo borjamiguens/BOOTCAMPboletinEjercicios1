@@ -41,4 +41,15 @@ public class Vaca extends AnimalGranja {
         this.sexo = sexo;
     }
 
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "Reino='" + reino + '\'' +
+                ", Tipo='" + tipo + '\'' +
+                ", Raza='" + raza + '\'' +
+                ", Medio='" + medio + '\'' +
+                ", Propietario='" + propietario + '\'' +
+                '}';
+    }
+
 }

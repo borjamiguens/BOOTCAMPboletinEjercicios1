@@ -1,6 +1,10 @@
 package org.example.ejercicio_14.clases;
 
+import java.util.ArrayList;
+
 public abstract class AnimalGranja extends Animal implements IPropietario {
+
+    public static ArrayList<Animal> listaAnimalesGranja = new ArrayList<>();
 
     //ATRIBUTOS
     String propietario;

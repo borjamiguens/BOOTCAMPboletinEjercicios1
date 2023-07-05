@@ -42,4 +42,16 @@ public class Perro extends Mascota {
     public void setSexo(String sexo) {
         this.sexo = sexo;
     }
+
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "Reino='" + reino + '\'' +
+                ", Tipo='" + tipo + '\'' +
+                ", Raza='" + raza + '\'' +
+                ", Medio='" + medio + '\'' +
+                ", Nombre='" + nombre + '\'' +
+                ", Propietario='" + propietario + '\'' +
+                '}';
+    }
 }
