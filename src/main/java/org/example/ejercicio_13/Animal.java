@@ -1,15 +1,18 @@
 package org.example.ejercicio_13;
 
+import org.example.ejercicio_14_16.clases.ISexual;
+
 import java.util.ArrayList;
 
-public abstract class Animal {
+public abstract class Animal implements ISexual {
 
     //ATRIBUTOS
-    static ArrayList<Animal> listaAnimales=new ArrayList<>();
-    private String reino;
-    private String tipo;
-    private String raza;
-    private String medio;
+    public static ArrayList<org.example.ejercicio_14_16.clases.Animal> listaAnimales = new ArrayList<>();
+    Enum reino;
+    Enum tipo;
+    String raza;
+    Enum medio;
+    Enum sexo;
 
     //CONSTRUCTORES
     /*public Animal(String reino, String tipo, String raza, String medio) {
@@ -28,6 +31,7 @@ public abstract class Animal {
 
     //METODOS
     abstract void reproducirSonido();
+
     abstract void desplazarse();
 
     @Override
@@ -40,7 +44,7 @@ public abstract class Animal {
                 '}';
     }
 
-    abstract Animal cloneAnimal();
+    abstract org.example.ejercicio_14_16.clases.Animal cloneAnimal();
 
     @Override
     protected Object clone() throws CloneNotSupportedException {
@@ -49,11 +53,11 @@ public abstract class Animal {
 
 
     //GETTERS
-    public String getReino() {
+    public Enum getReino() {
         return reino;
     }
 
-    public String getTipo() {
+    public Enum getTipo() {
         return tipo;
     }
 
@@ -61,7 +65,11 @@ public abstract class Animal {
         return raza;
     }
 
-    public String getMedio() {
+    public Enum getMedio() {
         return medio;
+    }
+
+    public Enum getSexo() {
+        return sexo;
     }
 }

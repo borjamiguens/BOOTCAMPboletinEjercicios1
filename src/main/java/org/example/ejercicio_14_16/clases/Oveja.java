@@ -1,32 +1,37 @@
-package org.example.ejercicio_15.clases;
+package org.example.ejercicio_14_16.clases;
 
 
-public class Gato extends Mascota {
+public class Oveja extends AnimalGranja {
 
     //CONSTRUCTORES
-    public Gato(String reino, String tipo, String raza, String medio, String nombre, String propietario) {
-        this.reino = reino;
-        this.tipo = tipo;
+    public Oveja() {
+        this.reino = Reino.MAMIFERO;
+        this.tipo = Tipo.OVEJA;
+        this.raza = "";
+        this.medio = Medio.TERRESTRE;
+        this.propietario = "";
+    }
+
+    public Oveja(String raza, String propietario) {
+        this.reino = Reino.MAMIFERO;
+        this.tipo = Tipo.OVEJA;
         this.raza = raza;
-        this.medio = medio;
-        this.nombre = nombre;
+        this.medio = Medio.TERRESTRE;
         this.propietario = propietario;
     }
 
-    public Gato(Animal animal) {
-        this.reino = reino;
-        this.tipo = tipo;
+    public Oveja(Animal animal) {
+        this.reino = Reino.MAMIFERO;
+        this.tipo = Tipo.OVEJA;
         this.raza = raza;
-        this.medio = medio;
-        this.nombre = nombre;
+        this.medio = Medio.TERRESTRE;
         this.propietario = propietario;
     }
-
 
     //METODOS A IMPLEMENTAR MAS ABAJO(EN JERARQUIA)
     @Override
     void reproducirSonido() {
-        System.out.println("miau");
+        System.out.println("beeeeee");
     }
 
     @Override
@@ -36,11 +41,14 @@ public class Gato extends Mascota {
 
     @Override
     Animal cloneAnimal() {
-        return new Gato(this.reino, this.tipo, this.raza, this.medio, this.nombre, this.propietario);
+
+        Oveja newOveja=new Oveja(this.raza, this.propietario);
+        newOveja.sexo=this.sexo;
+        return newOveja;
     }
 
     @Override
-    public void setSexo(String sexo) {
+    public void setSexo(Enum sexo) {
         this.sexo = sexo;
     }
 
@@ -51,8 +59,9 @@ public class Gato extends Mascota {
                 ", Tipo='" + tipo + '\'' +
                 ", Raza='" + raza + '\'' +
                 ", Medio='" + medio + '\'' +
-                ", Nombre='" + nombre + '\'' +
                 ", Propietario='" + propietario + '\'' +
                 '}';
     }
 }
+
+

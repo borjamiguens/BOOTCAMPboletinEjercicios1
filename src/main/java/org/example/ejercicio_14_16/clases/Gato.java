@@ -1,41 +1,51 @@
-package org.example.ejercicio_16.clases;
+package org.example.ejercicio_14_16.clases;
 
 
-public class Perro extends Mascota {
+public class Gato extends Mascota {
 
     //CONSTRUCTORES
 
-    public Perro() {
-        this.reino = "";
-        this.tipo = "";
+    public Gato() {
+        this.reino = Reino.MAMIFERO;
+        this.tipo = Tipo.GATO;
         this.raza = "";
-        this.medio = "";
+        this.medio = Medio.TERRESTRE;
         this.nombre = "";
         this.propietario = "";
     }
 
-    public Perro(String reino, String tipo, String raza, String medio, String nombre, String propietario) {
-        this.reino = reino;
-        this.tipo = tipo;
+    public Gato(String nombre) {
+        this.reino = Reino.MAMIFERO;
+        this.tipo = Tipo.GATO;
+        this.raza = "";
+        this.medio = Medio.TERRESTRE;
+        this.nombre = nombre;
+        this.propietario = "";
+    }
+
+    public Gato(String raza, String nombre, String propietario) {
+        this.reino = Reino.MAMIFERO;
+        this.tipo = Tipo.GATO;
         this.raza = raza;
-        this.medio = medio;
+        this.medio = Medio.TERRESTRE;
         this.nombre = nombre;
         this.propietario = propietario;
     }
 
-    public Perro(Animal animal) {
-        this.reino = reino;
-        this.tipo = tipo;
+    public Gato(Animal animal) {
+        this.reino = Reino.MAMIFERO;
+        this.tipo = Tipo.GATO;
         this.raza = raza;
-        this.medio = medio;
+        this.medio = Medio.TERRESTRE;
         this.nombre = nombre;
         this.propietario = propietario;
     }
+
 
     //METODOS A IMPLEMENTAR MAS ABAJO(EN JERARQUIA)
     @Override
     void reproducirSonido() {
-        System.out.println("guau");
+        System.out.println("miau");
     }
 
     @Override
@@ -45,11 +55,14 @@ public class Perro extends Mascota {
 
     @Override
     Animal cloneAnimal() {
-        return new Perro(this.reino, this.tipo, this.raza, this.medio, this.nombre, this.propietario);
+        Gato newGato=new Gato(this.raza, this.nombre, this.propietario);
+        newGato.sexo=this.sexo;
+        return newGato;
+
     }
 
     @Override
-    public void setSexo(String sexo) {
+    public void setSexo(Enum sexo) {
         this.sexo = sexo;
     }
 

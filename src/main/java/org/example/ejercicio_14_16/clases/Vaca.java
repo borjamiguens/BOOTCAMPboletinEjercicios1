@@ -1,30 +1,30 @@
-package org.example.ejercicio_16.clases;
+package org.example.ejercicio_14_16.clases;
 
 
 public class Vaca extends AnimalGranja {
 
     //CONSTRUCTORES
     public Vaca() {
-        this.reino = "";
-        this.tipo = "";
+        this.reino = Reino.MAMIFERO;
+        this.tipo = Tipo.VACA;
         this.raza = "";
-        this.medio = "";
+        this.medio = Medio.TERRESTRE;
         this.propietario = "";
     }
 
-    public Vaca(String reino, String tipo, String raza, String medio, String propietario) {
-        this.reino = reino;
-        this.tipo = tipo;
+    public Vaca(String raza, String propietario) {
+        this.reino = Reino.MAMIFERO;
+        this.tipo = Tipo.VACA;
         this.raza = raza;
-        this.medio = medio;
+        this.medio = Medio.TERRESTRE;
         this.propietario = propietario;
     }
 
     public Vaca(Animal animal) {
-        this.reino = animal.reino;
-        this.tipo = animal.tipo;
-        this.raza = animal.raza;
-        this.medio = animal.medio;
+        this.reino = Reino.MAMIFERO;
+        this.tipo = Tipo.VACA;
+        this.raza = raza;
+        this.medio = Medio.TERRESTRE;
         this.propietario = propietario;
     }
 
@@ -41,11 +41,13 @@ public class Vaca extends AnimalGranja {
 
     @Override
     Animal cloneAnimal() {
-        return new Vaca(this.reino, this.tipo, this.raza, this.medio, this.propietario);
+        Vaca newVaca=new Vaca(this.raza, this.propietario);
+        newVaca.sexo=this.sexo;
+        return newVaca;
     }
 
     @Override
-    public void setSexo(String sexo) {
+    public void setSexo(Enum sexo) {
         this.sexo = sexo;
     }
 

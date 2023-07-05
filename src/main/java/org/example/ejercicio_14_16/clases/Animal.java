@@ -1,4 +1,4 @@
-package org.example.ejercicio_16.clases;
+package org.example.ejercicio_14_16.clases;
 
 import java.util.ArrayList;
 
@@ -6,11 +6,11 @@ public abstract class Animal implements ISexual {
 
     //ATRIBUTOS
     public static ArrayList<Animal> listaAnimales = new ArrayList<>();
-    String reino;
-    String tipo;
+    Enum reino;
+    Enum tipo;
     String raza;
-    String medio;
-    String sexo="";
+    Enum medio;
+    Enum sexo;
 
     //CONSTRUCTORES
     /*public Animal(String reino, String tipo, String raza, String medio) {
@@ -51,11 +51,11 @@ public abstract class Animal implements ISexual {
 
 
     //GETTERS
-    public String getReino() {
+    public Enum getReino() {
         return reino;
     }
 
-    public String getTipo() {
+    public Enum getTipo() {
         return tipo;
     }
 
@@ -63,11 +63,11 @@ public abstract class Animal implements ISexual {
         return raza;
     }
 
-    public String getMedio() {
+    public Enum getMedio() {
         return medio;
     }
 
-    public String getSexo() {
+    public Enum getSexo() {
         return sexo;
     }
 }

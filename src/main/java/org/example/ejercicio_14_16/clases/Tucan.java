@@ -1,4 +1,4 @@
-package org.example.ejercicio_16.clases;
+package org.example.ejercicio_14_16.clases;
 
 
 public class Tucan extends AnimalSalvaje {
@@ -6,26 +6,24 @@ public class Tucan extends AnimalSalvaje {
     //CONSTRUCTORES
 
     public Tucan() {
-        this.reino = "";
-        this.tipo = "";
+        this.reino = Reino.AVE;
+        this.tipo = Tipo.TUCAN;
         this.raza = "";
-        this.medio = "";
+        this.medio = Medio.AEREO;
     }
 
-    public Tucan(String reino, String tipo, String raza, String medio) {
-        this.reino = reino;
-        this.tipo = tipo;
+    public Tucan(String raza) {
+        this.reino = Reino.AVE;
+        this.tipo = Tipo.TUCAN;
         this.raza = raza;
-        this.medio = medio;
-
+        this.medio = Medio.AEREO;
     }
 
     public Tucan(Animal animal) {
-        this.reino = reino;
-        this.tipo = tipo;
+        this.reino = Reino.AVE;
+        this.tipo = Tipo.TUCAN;
         this.raza = raza;
-        this.medio = medio;
-
+        this.medio = Medio.AEREO;
     }
 
     //METODOS A IMPLEMENTAR MAS ABAJO(EN JERARQUIA)
@@ -41,11 +39,13 @@ public class Tucan extends AnimalSalvaje {
 
     @Override
     Animal cloneAnimal() {
-        return new Tucan(this.reino, this.tipo, this.raza, this.medio);
+        Tucan newTucan=new Tucan(this.raza);
+        newTucan.sexo=this.sexo;
+        return newTucan;
     }
 
     @Override
-    public void setSexo(String sexo) {
+    public void setSexo(Enum sexo) {
         this.sexo = sexo;
     }
 }
