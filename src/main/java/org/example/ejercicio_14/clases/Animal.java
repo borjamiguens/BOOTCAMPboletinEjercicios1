@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public abstract class Animal {
 
     //ATRIBUTOS
-    static ArrayList<Animal> listaAnimales=new ArrayList<>();
+    static ArrayList<Animal> listaAnimales = new ArrayList<>();
     String reino;
     String tipo;
     String raza;
@@ -28,6 +28,7 @@ public abstract class Animal {
 
     //METODOS
     abstract void reproducirSonido();
+
     abstract void desplazarse();
 
     @Override

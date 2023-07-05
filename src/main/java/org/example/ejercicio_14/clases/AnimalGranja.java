@@ -9,7 +9,7 @@ public abstract class AnimalGranja extends Animal implements Ipropietario {
 
     //CONSTRUCTORES
 
-    public AnimalGranja(String reino, String tipo, String raza, String medio, String propietario) {
+    /*public AnimalGranja(String reino, String tipo, String raza, String medio, String propietario) {
         this.reino = reino;
         this.tipo = tipo;
         this.raza = raza;
@@ -23,7 +23,7 @@ public abstract class AnimalGranja extends Animal implements Ipropietario {
         this.raza = animal.raza;
         this.medio = animal.medio;
         this.propietario = propietario;
-    }
+    }*/
 
     //METODOS
     @Override

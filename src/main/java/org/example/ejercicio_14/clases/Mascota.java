@@ -5,11 +5,11 @@ import org.example.ejercicio_14.clases.Animal;
 public abstract class Mascota extends Animal implements Ipropietario {
 
     //ATRIBUTOS
-    private String nombre;
-    private String propietario;
+    String nombre;
+    String propietario;
 
     //CONSTRUCTORES
-    public Mascota(String reino, String tipo, String raza, String medio, String nombre, String propietario) {
+    /*public Mascota(String reino, String tipo, String raza, String medio, String nombre, String propietario) {
         this.reino = reino;
         this.tipo = tipo;
         this.raza = raza;
@@ -25,7 +25,7 @@ public abstract class Mascota extends Animal implements Ipropietario {
         this.medio = medio;
         this.nombre = nombre;
         this.propietario=propietario;
-    }
+    }*/
 
 
     //GETTERS

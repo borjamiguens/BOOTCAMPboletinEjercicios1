@@ -6,10 +6,13 @@ public class Main {
     public static void main(String[] args) {
 
         Perro perro1= new Perro("mamifero","perro","bulldog","terrestre","Josh","Joaquín");
-        Animal gato1= new Gato("mamifero","gato","angora","terrestre","Micho","Andrea");
-        Animal tucan1= new Tucan("ave","gaviota","atlantica","aereo");
-        Animal pezPayaso1= new Tucan("ave","gaviota","atlantica","aereo");
+        Gato gato1= new Gato("mamifero","gato","angora","terrestre","Micho","Andrea");
+        Tucan tucan1= new Tucan("ave","pajaro","comun","marino");
+        PezPayaso pezPayaso1= new PezPayaso("pez","pez tropical","comun","marino");
+        Oveja oveja1=new Oveja("mamifero","ovino","churra","terrestre","Serafín");
+        Vaca vaca1=new Vaca("mamifero","vacuno","rubia","terrestre","Laureano");
 
+        listaAnimales.
         Animal.add(perro1);
         Animal.listaAnimales.add(gato1);
         Animal.listaAnimales.add(gaviota1);

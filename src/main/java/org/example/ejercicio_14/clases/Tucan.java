@@ -1,32 +1,39 @@
 package org.example.ejercicio_14.clases;
 
 
-
 public class Tucan extends AnimalSalvaje {
 
     //CONSTRUCTORES
     public Tucan(String reino, String tipo, String raza, String medio) {
-        super(reino, tipo, raza, medio);
+        this.reino = reino;
+        this.tipo = tipo;
+        this.raza = raza;
+        this.medio = medio;
+
     }
 
     public Tucan(Animal animal) {
-        super(animal);
+        this.reino = reino;
+        this.tipo = tipo;
+        this.raza = raza;
+        this.medio = medio;
+
     }
 
     //METODOS A IMPLEMENTAR MAS ABAJO(EN JERARQUIA)
     @Override
     void reproducirSonido() {
-
+        System.out.println("graznido");
     }
 
     @Override
     void desplazarse() {
-
+        System.out.println("vuela");
     }
 
     @Override
     Animal cloneAnimal() {
-        return null;
+        return new Tucan(this.reino, this.tipo, this.raza, this.medio);
     }
 
 
