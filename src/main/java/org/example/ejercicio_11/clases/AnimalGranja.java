@@ -5,10 +5,14 @@ import org.example.ejercicio_09.clases.Reino;
 import org.example.ejercicio_09.clases.Tipo;
 import org.example.ejercicio_10.clases.Animal;
 
+import java.util.ArrayList;
+
 public class AnimalGranja extends Animal implements Ipropietario{
 
     //ATRIBUTOS
     String propietario;
+
+    public static ArrayList<AnimalGranja> listaAnimalesGranjaPrueba = new ArrayList<>();
 
     //CONSTRUCTORES
     public AnimalGranja(Reino reino, Tipo tipo, String raza, Medio medio, String propietario) {
@@ -31,4 +35,17 @@ public class AnimalGranja extends Animal implements Ipropietario{
     public void setPropietario() {
 
     }
+
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "Reino='" + super.getReino().toString() + '\'' +
+                ", Tipo='" + super.getTipo().toString() + '\'' +
+                ", Raza='" + super.getRaza().toString() + '\'' +
+                ", Medio='" + super.getMedio().toString() + '\'' +
+                ", propietario='" + propietario + '\'' +
+                '}';
+    }
+
+
 }

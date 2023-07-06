@@ -1,6 +1,10 @@
-package org.example.ejercicio_13;
+package org.example.ejercicio_13.clases;
 
+import org.example.ejercicio_09.clases.Medio;
+import org.example.ejercicio_09.clases.Tipo;
 import org.example.ejercicio_14_16.clases.ISexual;
+import org.example.ejercicio_14_16.clases.Reino;
+import org.example.ejercicio_14_16.clases.Sexo;
 
 import java.util.ArrayList;
 
@@ -11,37 +15,19 @@ public abstract class Animal implements ISexual {
     //protected static ArrayList<Integer> listaId= new ArrayList<>();
     protected static Integer Id=0;
 
-    protected Enum reino;
-    protected Enum tipo;
+    protected Reino reino;
+    protected Tipo tipo;
     protected String raza;
-    protected Enum medio;
-    protected Enum sexo;
+    protected Medio medio;
+    protected Sexo sexo;
     protected Animal padre;
     protected Animal madre;
     protected int generacion;
 
 
-
-    //CONSTRUCTORES
-    /*public Animal(String reino, String tipo, String raza, String medio) {
-        this.reino = reino;
-        this.tipo = tipo;
-        this.raza = raza;
-        this.medio = medio;
-    }
-
-    public Animal(Animal animal) {
-        this.reino=animal.reino;
-        this.tipo = animal.tipo;
-        this.raza = animal.raza;
-        this.medio = animal.medio;
-    }*/
-
     //METODOS
     protected abstract void reproducirSonido();
-
     protected abstract void desplazarse();
-
     protected abstract Animal cloneAnimal();
 
     @Override
@@ -72,11 +58,11 @@ public abstract class Animal implements ISexual {
 
 
     //GETTERS
-    public Enum getReino() {
+    public Reino getReino() {
         return reino;
     }
 
-    public Enum getTipo() {
+    public Tipo getTipo() {
         return tipo;
     }
 
@@ -84,11 +70,11 @@ public abstract class Animal implements ISexual {
         return raza;
     }
 
-    public Enum getMedio() {
+    public Medio getMedio() {
         return medio;
     }
 
-    public Enum getSexo() {
+    public Sexo getSexo() {
         return sexo;
     }
 

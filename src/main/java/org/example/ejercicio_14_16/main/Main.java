@@ -1,12 +1,11 @@
 package org.example.ejercicio_14_16.main;
 
-import org.example.ejercicio_13.Animal;
+import org.example.ejercicio_13.clases.Animal;
 import org.example.ejercicio_14_16.clases.*;
 
 import java.util.ArrayList;
 
-import static org.example.ejercicio_13.Animal.listaAnimales;
-import static org.example.ejercicio_13.Animal.listaAnimales;
+import static org.example.ejercicio_13.clases.Animal.listaAnimales;
 import static org.example.ejercicio_14_16.clases.AnimalGranja.listaAnimalesGranja;
 import static org.example.ejercicio_14_16.clases.AnimalSalvaje.listaAnimalesSalvajes;
 import static org.example.ejercicio_14_16.clases.Mascota.listaMascotas;

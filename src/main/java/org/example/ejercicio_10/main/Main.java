@@ -5,6 +5,8 @@ import org.example.ejercicio_09.clases.Reino;
 import org.example.ejercicio_09.clases.Tipo;
 import org.example.ejercicio_10.clases.Animal;
 
+import static org.example.ejercicio_10.clases.Animal.listaAnimales;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -12,16 +14,16 @@ public class Main {
         Animal gato1= new Animal(Reino.MAMIFERO,Tipo.GATO,"angora",Medio.TERRESTRE);
         Animal tucan1= new Animal(Reino.AVE,Tipo.TUCAN,"comun",Medio.AEREO);
 
-        Animal.listaAnimales.add(perro1);
-        Animal.listaAnimales.add(gato1);
-        Animal.listaAnimales.add(tucan1);
+        listaAnimales.add(perro1);
+        listaAnimales.add(gato1);
+        listaAnimales.add(tucan1);
 
         Animal perro2=new Animal(perro1);
         Animal perro3=perro1.cloneAnimal();
-        Animal.listaAnimales.add(perro2);
-        Animal.listaAnimales.add(perro3);
+        listaAnimales.add(perro2);
+        listaAnimales.add(perro3);
 
-        for(Animal e : Animal.listaAnimales){
+        for(Animal e : listaAnimales){
             System.out.println(e.toString());
         }
 

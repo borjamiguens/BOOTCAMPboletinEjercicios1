@@ -1,6 +1,6 @@
 package org.example.ejercicio_14_16.clases;
 
-import org.example.ejercicio_13.Animal;
+import org.example.ejercicio_13.clases.Animal;
 
 import java.util.ArrayList;
 
