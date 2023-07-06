@@ -8,6 +8,9 @@ public abstract class Animal implements ISexual {
 
     //ATRIBUTOS
     public static ArrayList<Animal> listaAnimales = new ArrayList<>();
+    //protected static ArrayList<Integer> listaId= new ArrayList<>();
+    protected static Integer Id=0;
+
     protected Enum reino;
     protected Enum tipo;
     protected String raza;
@@ -16,6 +19,8 @@ public abstract class Animal implements ISexual {
     protected Animal padre;
     protected Animal madre;
     protected int generacion;
+
+
 
     //CONSTRUCTORES
     /*public Animal(String reino, String tipo, String raza, String medio) {
@@ -54,10 +59,15 @@ public abstract class Animal implements ISexual {
     }
 
 
-
     @Override
     protected Object clone() throws CloneNotSupportedException {
         return super.clone();
+    }
+
+    protected Integer generaId(){
+        Id++;
+        //listaId.add(Id);
+        return Id;
     }
 
 

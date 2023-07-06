@@ -1,24 +1,29 @@
-package org.example.ejercicio_09;
+package org.example.ejercicio_10.clases;
+
+import org.example.ejercicio_09.clases.Medio;
+import org.example.ejercicio_09.clases.Reino;
+import org.example.ejercicio_09.clases.Tipo;
 
 import java.util.ArrayList;
 
 public class Animal {
 
     //ATRIBUTOS
-    static ArrayList<Animal> listaAnimales=new ArrayList<>();
-    private String reino;
-    private String tipo;
+    public static ArrayList<Animal> listaAnimales=new ArrayList<>();
+    private Reino reino;
+    private Tipo tipo;
     private String raza;
-    private String medio;
+    private Medio medio;
 
     //CONSTRUCTORES
-    public Animal(String reino, String tipo, String raza, String medio) {
+    public Animal(Reino reino, Tipo tipo, String raza, Medio medio) {
         this.reino = reino;
         this.tipo = tipo;
         this.raza = raza;
         this.medio = medio;
     }
 
+    //CONSTRUCTOR DE COPIA
     public Animal(Animal animal) {
         this.reino=animal.reino;
         this.tipo = animal.tipo;
@@ -36,23 +41,24 @@ public class Animal {
                 ", Medio='" + medio + '\'' +
                 '}';
     }
-
+    //METODO CLONE
     public Animal cloneAnimal(){
         return new Animal(this.reino, this.tipo, this.raza, this.medio);
     }
 
     @Override
     protected Object clone() throws CloneNotSupportedException {
-        return super.clone();
+        return new Animal(this.reino, this.tipo, this.raza, this.medio);
+        /*return super.clone();*/
     }
 
 
     //GETTERS
-    public String getReino() {
+    public Reino getReino() {
         return reino;
     }
 
-    public String getTipo() {
+    public Tipo getTipo() {
         return tipo;
     }
 
@@ -60,7 +66,7 @@ public class Animal {
         return raza;
     }
 
-    public String getMedio() {
+    public Medio getMedio() {
         return medio;
     }
 }

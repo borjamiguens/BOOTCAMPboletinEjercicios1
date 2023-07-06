@@ -1,4 +1,4 @@
-package org.example.ejercicio_11;
+package org.example.ejercicio_11.clases;
 
 public interface Ipropietario {
     String getPropietario();
