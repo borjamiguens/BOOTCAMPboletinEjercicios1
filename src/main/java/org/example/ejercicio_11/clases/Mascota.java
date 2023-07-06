@@ -7,7 +7,7 @@ import org.example.ejercicio_10.clases.Animal;
 
 import java.util.ArrayList;
 
-public class Mascota extends Animal implements Ipropietario {
+public class Mascota extends Animal implements IPropietario {
 
     //ATRIBUTOS
     private String nombre;
@@ -49,13 +49,13 @@ public class Mascota extends Animal implements Ipropietario {
         return nombre;
     }
 
-    @Override
+
     public String getPropietario() {
         return propietario;
     }
 
-    @Override
-    public void setPropietario() {
 
+    public void setPropietario(String propietario) {
+        this.propietario=propietario;
     }
 }

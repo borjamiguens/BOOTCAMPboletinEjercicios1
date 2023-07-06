@@ -1,24 +1,18 @@
-package org.example.ejercicio_14_16.clases;
+package org.example.ejercicio_14.clases;
 
-
+import org.example.ejercicio_09.clases.Medio;
+import org.example.ejercicio_09.clases.Reino;
+import org.example.ejercicio_09.clases.Sexo;
+import org.example.ejercicio_09.clases.Tipo;
+import org.example.ejercicio_09.clases.Sexo;
 import org.example.ejercicio_13.clases.Animal;
+import org.example.ejercicio_13.clases.AnimalSalvaje;
 
 public class Tucan extends AnimalSalvaje {
 
     //CONSTRUCTORES
 
-    public Tucan() {
-        this.reino = Reino.AVE;
-        this.tipo = Tipo.TUCAN;
-        this.raza = "";
-        this.medio = Medio.AEREO;
-        this.sexo=null;
-        this.padre=null;
-        this.madre=null;
-        this.generacion=0;
-    }
-
-    public Tucan(String raza, Enum sexo, Animal padre, Animal madre, int generacion) {
+    public Tucan(String raza, Sexo sexo, Animal padre, Animal madre, int generacion) {
         this.reino = Reino.AVE;
         this.tipo = Tipo.TUCAN;
         this.raza = raza;
@@ -28,19 +22,19 @@ public class Tucan extends AnimalSalvaje {
         this.madre=madre;
         this.generacion=generacion;
     }
-
-    public Tucan(Animal animal) {
+    //CONSTRUCTOR COPIA
+    public Tucan(Tucan tucan) {
         this.reino = Reino.AVE;
         this.tipo = Tipo.TUCAN;
-        this.raza = raza;
+        this.raza = tucan.raza;
         this.medio = Medio.AEREO;
-        this.sexo=null;
-        this.padre=null;
-        this.madre=null;
-        this.generacion=0;
+        this.sexo=tucan.sexo;
+        this.padre=tucan.padre;
+        this.madre=tucan.madre;
+        this.generacion=tucan.generacion;
     }
 
-    //METODOS A IMPLEMENTAR MAS ABAJO(EN JERARQUIA)
+    //METODOS
     @Override
     public void reproducirSonido() {
         System.out.println("graznido");
@@ -59,7 +53,7 @@ public class Tucan extends AnimalSalvaje {
 
 
     @Override
-    public void setSexo(Enum sexo) {
+    public void setSexo(Sexo sexo) {
         this.sexo = sexo;
     }
 

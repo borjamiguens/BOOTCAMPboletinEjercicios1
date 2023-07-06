@@ -1,10 +1,10 @@
 package org.example.ejercicio_13.clases;
 
 import org.example.ejercicio_09.clases.Medio;
+import org.example.ejercicio_09.clases.Reino;
+import org.example.ejercicio_09.clases.Sexo;
 import org.example.ejercicio_09.clases.Tipo;
-import org.example.ejercicio_14_16.clases.ISexual;
-import org.example.ejercicio_14_16.clases.Reino;
-import org.example.ejercicio_14_16.clases.Sexo;
+import org.example.ejercicio_14.clases.ISexual;
 
 import java.util.ArrayList;
 
@@ -57,6 +57,8 @@ public abstract class Animal implements ISexual {
     }
 
 
+
+
     //GETTERS
     public Reino getReino() {
         return reino;
@@ -89,4 +91,10 @@ public abstract class Animal implements ISexual {
     public int getGeneracion() {
         return generacion;
     }
+
+    public void setSexo(Sexo sexo) {
+        this.sexo = sexo;
+    }
+
+
 }

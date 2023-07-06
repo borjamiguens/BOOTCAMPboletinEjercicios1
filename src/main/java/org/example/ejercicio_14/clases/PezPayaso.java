@@ -1,23 +1,18 @@
-package org.example.ejercicio_14_16.clases;
+package org.example.ejercicio_14.clases;
 
-
+import org.example.ejercicio_09.clases.Medio;
+import org.example.ejercicio_09.clases.Reino;
+import org.example.ejercicio_09.clases.Sexo;
+import org.example.ejercicio_09.clases.Tipo;
+import org.example.ejercicio_09.clases.Sexo;
 import org.example.ejercicio_13.clases.Animal;
+import org.example.ejercicio_13.clases.AnimalSalvaje;
 
 public class PezPayaso extends AnimalSalvaje {
 
     //CONSTRUCTORES
-    public PezPayaso() {
-        this.reino = Reino.PEZ;
-        this.tipo = Tipo.PEZ_PAYASO;
-        this.raza = "";
-        this.medio = Medio.ACUATICO;
-        this.sexo=null;
-        this.padre=null;
-        this.madre=null;
-        this.generacion=0;
-    }
 
-    public PezPayaso(String raza, Enum sexo, Animal padre, Animal madre, int generacion) {
+    public PezPayaso(String raza, Sexo sexo, Animal padre, Animal madre, int generacion) {
         this.reino = Reino.PEZ;
         this.tipo = Tipo.PEZ_PAYASO;
         this.raza = raza;
@@ -28,18 +23,19 @@ public class PezPayaso extends AnimalSalvaje {
         this.generacion=generacion;
     }
 
-    public PezPayaso(Animal animal) {
+    //CONSTRUCTOR COPIA
+    public PezPayaso(PezPayaso pezPayaso) {
         this.reino = Reino.PEZ;
         this.tipo = Tipo.PEZ_PAYASO;
-        this.raza = raza;
+        this.raza = pezPayaso.raza;
         this.medio = Medio.ACUATICO;
-        this.sexo=null;
-        this.padre=null;
-        this.madre=null;
-        this.generacion=0;
+        this.sexo=pezPayaso.sexo;
+        this.padre=pezPayaso.padre;
+        this.madre=pezPayaso.madre;
+        this.generacion=pezPayaso.generacion;
     }
 
-    //METODOS A IMPLEMENTAR MAS ABAJO(EN JERARQUIA)
+    //METODOS
     @Override
     public void reproducirSonido() {
         System.out.println("inaudible");
@@ -58,7 +54,7 @@ public class PezPayaso extends AnimalSalvaje {
 
 
     @Override
-    public void setSexo(Enum sexo) {
+    public void setSexo(Sexo sexo) {
         this.sexo = sexo;
     }
 

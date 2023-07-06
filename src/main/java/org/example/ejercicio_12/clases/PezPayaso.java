@@ -14,7 +14,6 @@ public class PezPayaso extends AnimalSalvaje {
     }
 
     public PezPayaso(PezPayaso pezPayaso) {
-
         super(pezPayaso);
     }
 }
