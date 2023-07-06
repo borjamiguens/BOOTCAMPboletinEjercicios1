@@ -15,6 +15,7 @@ import static org.example.ejercicio_14_16.clases.Mascota.listaMascotas;
 public class Main {
     public static void main(String[] args) {
 
+        //CREAMOS ANIMALES Y LOS AÑADIMOS
         Perro perro1 = new Perro("bulldog", "Chucho", "Joaquín", Sexo.MACHO, null, null, 0);
         Perro perro2 = new Perro("bulldog", "Chucha", "Felipe", Sexo.HEMBRA, null, null, 0);
         Perro perro3 = new Perro("bulldog", "Chuchon", "Carlos", Sexo.MACHO, null, null, 0);
@@ -60,8 +61,7 @@ public class Main {
         listaAnimales.add(vaca1);
         listaAnimales.add(vaca2);
 
-        //EJERCICIO_15
-
+        ///////EJERCICIO_15///////
         /*for (Animal e : listaAnimales) {
             System.out.println(e.toString());
         }*/
@@ -87,10 +87,10 @@ public class Main {
         /*for (Animal e : listaAnimalesGranja) {
             System.out.println(e.toString());
         }*/
-        //FIN_EJ_15
+        ////////FIN_EJ_15/////////
 
 
-        //iterar hasta que el numero de animales deje de crecer
+        //iterar hasta que el numero de animales hasta un máximo de generaciones
         int generacion = 1;
         do {
 
