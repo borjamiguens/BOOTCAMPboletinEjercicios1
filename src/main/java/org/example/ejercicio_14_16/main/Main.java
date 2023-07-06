@@ -18,15 +18,15 @@ public class Main {
         //CREAMOS ANIMALES Y LOS AÑADIMOS
         Perro perro1 = new Perro("bulldog", "Chucho", "Joaquín", Sexo.MACHO, null, null, 0);
         Perro perro2 = new Perro("bulldog", "Chucha", "Felipe", Sexo.HEMBRA, null, null, 0);
-        Perro perro3 = new Perro("bulldog", "Chuchon", "Carlos", Sexo.MACHO, null, null, 0);
-        Perro perro4 = new Perro("bulldog", "Chuchona", "Ana", Sexo.HEMBRA, null, null, 0);
+        Perro perro3 = new Perro("bulldog", "Chuchona", "Carlos", Sexo.HEMBRA, null, null, 0);
+        Perro perro4 = new Perro("bulldog", "Chuchon", "Ana", Sexo.MACHO, null, null, 0);
         /*Perro perro5 = new Perro("bulldog", "Perraco", "Carlos", Sexo.MACHO, null, null, 0);
         Perro perro6 = new Perro("bulldog", "Perraca", "Carlos", Sexo.HEMBRA, null, null, 0);*/
 
         Gato gato1 = new Gato("angora", "Micho", "Andrea", Sexo.MACHO, null, null, 0);
         Gato gato2 = new Gato("angora", "Micha", "Susana", Sexo.HEMBRA, null, null, 0);
-        Gato gato3 = new Gato("persa", "Michinho", "Andrea", Sexo.MACHO, null, null, 0);
-        Gato gato4 = new Gato("persa", "Michinha", "Susana", Sexo.HEMBRA, null, null, 0);
+        Gato gato3 = new Gato("persa", "Michinha", "Andrea", Sexo.HEMBRA, null, null, 0);
+        Gato gato4 = new Gato("persa", "Michinho", "Susana", Sexo.MACHO, null, null, 0);
 
         Tucan tucan1 = new Tucan("comun", Sexo.MACHO, null, null, 0);
         Tucan tucan2 = new Tucan("comun", Sexo.HEMBRA, null, null, 0);
@@ -136,18 +136,18 @@ public class Main {
                         }
                         if (listaAnimales.get(i).getTipo().equals(Tipo.PERRO)) {
                             listaAnimalesCria.add(new Perro("", "", "", Sexo.MACHO, listaAnimales.get(p), listaAnimales.get(m), generacion));//un perro macho tendra un hijo con cada perra(2)
-                            listaAnimalesCria.add(new Perro("", "", "", Sexo.HEMBRA, listaAnimales.get(p), listaAnimales.get(m), generacion));
+                            /*listaAnimalesCria.add(new Perro("", "", "", Sexo.HEMBRA, listaAnimales.get(p), listaAnimales.get(m), generacion));*/
                         } else if (listaAnimales.get(i).getTipo().equals(Tipo.GATO)) {
                             listaAnimalesCria.add(new Gato("", "", "", Sexo.MACHO, listaAnimales.get(p), listaAnimales.get(m), generacion));
-                            listaAnimalesCria.add(new Gato("", "", "", Sexo.MACHO, listaAnimales.get(p), listaAnimales.get(m), generacion));
+                            /*listaAnimalesCria.add(new Gato("", "", "", Sexo.HEMBRA, listaAnimales.get(p), listaAnimales.get(m), generacion));*/
                         } else if (listaAnimales.get(i).getTipo().equals(Tipo.TUCAN)) {
-                            listaAnimalesCria.add(new Tucan());
+                            listaAnimalesCria.add(new Tucan("",  Sexo.MACHO, listaAnimales.get(p), listaAnimales.get(m), generacion));
                         } else if (listaAnimales.get(i).getTipo().equals(Tipo.PEZ_PAYASO)) {
-                            listaAnimalesCria.add(new PezPayaso());
+                            listaAnimalesCria.add(new PezPayaso("",  Sexo.MACHO, listaAnimales.get(p), listaAnimales.get(m), generacion));
                         } else if (listaAnimales.get(i).getTipo().equals(Tipo.OVEJA)) {
-                            listaAnimalesCria.add(new Oveja());
+                            listaAnimalesCria.add(new Oveja("","", Sexo.MACHO, listaAnimales.get(p), listaAnimales.get(m), generacion));
                         } else if (listaAnimales.get(i).getTipo().equals(Tipo.VACA)) {
-                            listaAnimalesCria.add(new Vaca());
+                            listaAnimalesCria.add(new Vaca("","", Sexo.MACHO, listaAnimales.get(p), listaAnimales.get(m), generacion));
                         }
                     }
                     /*listaAnimales.add(new Perro());*/
