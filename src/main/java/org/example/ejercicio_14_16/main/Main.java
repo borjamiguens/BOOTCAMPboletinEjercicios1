@@ -30,15 +30,20 @@ public class Main {
 
         Tucan tucan1 = new Tucan("comun", Sexo.MACHO, null, null, 0);
         Tucan tucan2 = new Tucan("comun", Sexo.HEMBRA, null, null, 0);
+        Tucan tucan3 = new Tucan("comun", Sexo.HEMBRA, null, null, 0);
 
         PezPayaso pezPayaso1 = new PezPayaso("comun", Sexo.MACHO, null, null, 0);
         PezPayaso pezPayaso2 = new PezPayaso("comun", Sexo.HEMBRA, null, null, 0);
+        PezPayaso pezPayaso3 = new PezPayaso("comun", Sexo.HEMBRA, null, null, 0);
 
         Oveja oveja1 = new Oveja("churra", "Serafín", Sexo.MACHO, null, null, 0);
         Oveja oveja2 = new Oveja("churra", "Serafín", Sexo.HEMBRA, null, null, 0);
+        Oveja oveja3 = new Oveja("churra", "Serafín", Sexo.HEMBRA, null, null, 0);
 
         Vaca vaca1 = new Vaca("rubia", "Laureano", Sexo.MACHO, null, null, 0);
         Vaca vaca2 = new Vaca("rubia", "Laureano", Sexo.HEMBRA, null, null, 0);
+        Vaca vaca3 = new Vaca("rubia", "Laureano", Sexo.HEMBRA, null, null, 0);
+
         listaAnimales.add(perro1);
         listaAnimales.add(perro2);
         listaAnimales.add(perro3);
@@ -51,15 +56,19 @@ public class Main {
 
         listaAnimales.add(tucan1);
         listaAnimales.add(tucan2);
+        listaAnimales.add(tucan3);
 
         listaAnimales.add(pezPayaso1);
         listaAnimales.add(pezPayaso2);
+        listaAnimales.add(pezPayaso3);
 
         listaAnimales.add(oveja1);
         listaAnimales.add(oveja2);
+        listaAnimales.add(oveja3);
 
         listaAnimales.add(vaca1);
         listaAnimales.add(vaca2);
+        listaAnimales.add(vaca3);
 
         ///////EJERCICIO_15///////
         /*for (Animal e : listaAnimales) {
@@ -111,7 +120,7 @@ public class Main {
                     //falta añadir la condicion de un hijo por pareja podemos probar con un arrayList de Hijos???
                     if (
                             ((listaAnimales.get(i)).getClass() == listaAnimales.get(j).getClass()) && (listaAnimales.get(i).getSexo() != listaAnimales.get(j).getSexo())
-                                    && ((listaAnimales.get(i).getPadre() != listaAnimales.get(j).getPadre() && listaAnimales.get(i).getMadre() != listaAnimales.get(j).getMadre()) || listaAnimales.get(i).getGeneracion() == 0)
+                                    && ((listaAnimales.get(i).getPadre() != listaAnimales.get(j).getPadre() && listaAnimales.get(i).getMadre() != listaAnimales.get(j).getMadre()) || (listaAnimales.get(i).getGeneracion() == 0 && listaAnimales.get(j).getGeneracion() == 0))
                                     && (listaAnimales.get(i).getPadre() != listaAnimales.get(j) || listaAnimales.get(j).getPadre() != listaAnimales.get(i))
                                     && (listaAnimales.get(i).getMadre() != listaAnimales.get(j) || listaAnimales.get(j).getMadre() != listaAnimales.get(i))
                     ) {
