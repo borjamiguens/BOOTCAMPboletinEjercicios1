@@ -14,6 +14,10 @@ public class Perro extends Mascota {
         this.medio = Medio.TERRESTRE;
         this.nombre = "";
         this.propietario = "";
+        this.sexo=null;
+        this.padre=null;
+        this.madre=null;
+        this.generacion=0;
     }
 
     public Perro(String nombre) {
@@ -23,15 +27,24 @@ public class Perro extends Mascota {
         this.medio = Medio.TERRESTRE;
         this.nombre = nombre;
         this.propietario = "";
+        this.sexo=null;
+        this.padre=null;
+        this.madre=null;
+        this.generacion=0;
+
     }
 
-    public Perro(String raza, String nombre, String propietario) {
+    public Perro(String raza, String nombre, String propietario, Enum sexo, Animal padre, Animal madre, int generacion) {
         this.reino = Reino.MAMIFERO;
         this.tipo = Tipo.PERRO;
         this.raza = raza;
         this.medio = Medio.TERRESTRE;
         this.nombre = nombre;
         this.propietario = propietario;
+        this.sexo=sexo;
+        this.padre=padre;
+        this.madre=madre;
+        this.generacion=generacion;
        }
 
     public Perro(Animal animal) {
@@ -41,6 +54,10 @@ public class Perro extends Mascota {
         this.medio = Medio.TERRESTRE;
         this.nombre = nombre;
         this.propietario = propietario;
+        this.sexo=null;
+        this.padre=null;
+        this.madre=null;
+        this.generacion=0;
     }
 
     //METODOS A IMPLEMENTAR MAS ABAJO(EN JERARQUIA)
@@ -56,8 +73,7 @@ public class Perro extends Mascota {
 
     @Override
     protected Animal cloneAnimal() {
-        Perro newPerro=new Perro(this.raza, this.nombre, this.propietario);
-        newPerro.sexo=this.sexo;
+        Perro newPerro=new Perro(this.raza, this.nombre, this.propietario,this.sexo,this.padre,this.madre,this.generacion);
         return newPerro;
     }
 
@@ -71,6 +87,10 @@ public class Perro extends Mascota {
                 ", Medio='" + medio + '\'' +
                 ", Nombre='" + nombre + '\'' +
                 ", Propietario='" + propietario + '\'' +
+                ", Sexo='" + sexo + '\'' +
+                ", Padre='" + padre + '\'' +
+                ", Madre='" + madre + '\'' +
+                ", Generacion='" + generacion + '\'' +
                 '}';
     }
 

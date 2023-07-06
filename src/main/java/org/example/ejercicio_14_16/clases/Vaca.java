@@ -12,14 +12,22 @@ public class Vaca extends AnimalGranja {
         this.raza = "";
         this.medio = Medio.TERRESTRE;
         this.propietario = "";
+        this.sexo=null;
+        this.padre=null;
+        this.madre=null;
+        this.generacion=0;
     }
 
-    public Vaca(String raza, String propietario) {
+    public Vaca(String raza, String propietario, Enum sexo, Animal padre, Animal madre, int generacion) {
         this.reino = Reino.MAMIFERO;
         this.tipo = Tipo.VACA;
         this.raza = raza;
         this.medio = Medio.TERRESTRE;
         this.propietario = propietario;
+        this.sexo=sexo;
+        this.padre=padre;
+        this.madre=madre;
+        this.generacion=generacion;
     }
 
     public Vaca(Animal animal) {
@@ -28,6 +36,10 @@ public class Vaca extends AnimalGranja {
         this.raza = raza;
         this.medio = Medio.TERRESTRE;
         this.propietario = propietario;
+        this.sexo=null;
+        this.padre=null;
+        this.madre=null;
+        this.generacion=0;
     }
 
     //METODOS A IMPLEMENTAR MAS ABAJO(EN JERARQUIA)
@@ -43,8 +55,7 @@ public class Vaca extends AnimalGranja {
 
     @Override
     protected Animal cloneAnimal() {
-        Vaca newVaca=new Vaca(this.raza, this.propietario);
-        newVaca.sexo=this.sexo;
+        Vaca newVaca=new Vaca(this.raza, this.propietario, this.sexo, this.padre, this.madre, this.generacion);
         return newVaca;
     }
 
@@ -62,6 +73,10 @@ public class Vaca extends AnimalGranja {
                 ", Raza='" + raza + '\'' +
                 ", Medio='" + medio + '\'' +
                 ", Propietario='" + propietario + '\'' +
+                ", Sexo='" + sexo + '\'' +
+                ", Padre='" + padre + '\'' +
+                ", Madre='" + madre + '\'' +
+                ", Generacion='" + generacion + '\'' +
                 '}';
     }
 

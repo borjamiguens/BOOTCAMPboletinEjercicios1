@@ -13,6 +13,9 @@ public abstract class Animal implements ISexual {
     protected String raza;
     protected Enum medio;
     protected Enum sexo;
+    protected Animal padre;
+    protected Animal madre;
+    protected int generacion;
 
     //CONSTRUCTORES
     /*public Animal(String reino, String tipo, String raza, String medio) {
@@ -43,6 +46,10 @@ public abstract class Animal implements ISexual {
                 ", Tipo='" + tipo + '\'' +
                 ", Raza='" + raza + '\'' +
                 ", Medio='" + medio + '\'' +
+                ", Sexo='" + sexo + '\'' +
+                ", Padre='" + padre + '\'' +
+                ", Madre='" + madre + '\'' +
+                ", Generacion='" + generacion + '\'' +
                 '}';
     }
 
@@ -73,5 +80,17 @@ public abstract class Animal implements ISexual {
 
     public Enum getSexo() {
         return sexo;
+    }
+
+    public Animal getPadre() {
+        return padre;
+    }
+
+    public Animal getMadre() {
+        return madre;
+    }
+
+    public int getGeneracion() {
+        return generacion;
     }
 }
