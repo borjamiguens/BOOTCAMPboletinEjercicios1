@@ -44,6 +44,8 @@ public class Zoo {
         listaAnimales.add(perro2);
         listaAnimales.add(perro3);
         listaAnimales.add(perro4);
+        listaAnimales.add(perro5);
+        listaAnimales.add(perro6);
 
         listaAnimales.add(gato1);
         listaAnimales.add(gato2);
@@ -134,7 +136,7 @@ public class Zoo {
             }*/
 
                 generacion++;
-            } while (generacion < 4);/*"mientras el numero de animales sea distinto al bucle anterior generacion<4*/
+            } while (generacion < 6);/*"mientras el numero de animales sea distinto al bucle anterior generacion<4*/
 
             for (Animal e : listaAnimales) {
                 System.out.println(e.toString());
