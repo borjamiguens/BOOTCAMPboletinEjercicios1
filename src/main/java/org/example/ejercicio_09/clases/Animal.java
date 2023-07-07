@@ -18,7 +18,13 @@ public class Animal {
         this.medio = medio;
     }
 
-
+    //CONSTRUCTOR DE COPIA
+    public Animal(Animal animal) {
+        this.reino=animal.reino;
+        this.tipo = animal.tipo;
+        this.raza = animal.raza;
+        this.medio = animal.medio;
+    }
 
     //METODOS
     @Override
@@ -31,7 +37,11 @@ public class Animal {
                 '}';
     }
 
-
+    //METODO CLONE
+    @Override
+    public Animal clone() {
+        return new Animal(this.reino, this.tipo, this.raza, this.medio);
+    }
 
     //GETTERS
     public Reino getReino() {
