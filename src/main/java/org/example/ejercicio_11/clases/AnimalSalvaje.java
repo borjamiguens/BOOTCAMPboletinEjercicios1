@@ -23,6 +23,12 @@ public class AnimalSalvaje extends Animal {
 
     @Override
     public String toString() {
-        return super.toString();
+            return "AnimalSalvaje{" +
+                    "Reino='" + super.getTipo().toString() + '\'' +
+                    ", Tipo='" + super.getTipo().toString() + '\'' +
+                    ", Raza='" + super.getRaza().toString() + '\'' +
+                    ", Medio='" + super.getMedio().toString() + '\'' +
+                    '}';
+
     }
 }

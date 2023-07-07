@@ -38,7 +38,7 @@ public class AnimalGranja extends Animal implements IPropietario{
 
     @Override
     public String toString() {
-        return "Animal{" +
+        return "AnimalGranja{" +
                 "Reino='" + super.getTipo().toString() + '\'' +
                 ", Tipo='" + super.getTipo().toString() + '\'' +
                 ", Raza='" + super.getRaza().toString() + '\'' +
