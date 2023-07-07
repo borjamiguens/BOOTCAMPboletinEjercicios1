@@ -8,8 +8,11 @@ import org.example.ejercicio_09.clases.Medio;
 
 public class Gato extends Mascota {
 
+    protected Gato padre;
+    protected Gato madre;
+
     //CONSTRUCTORES
-    public Gato(String raza, String nombre, String propietario, Sexo sexo) {
+    public Gato(String raza, String nombre, String propietario, Sexo sexo, Gato padre, Gato madre, int generacion) {
         this.reino = Reino.MAMIFERO;
         this.tipo = Tipo.GATO;
         this.raza = raza;
@@ -17,6 +20,9 @@ public class Gato extends Mascota {
         this.nombre = nombre;
         this.propietario = propietario;
         this.sexo=sexo;
+        this.padre=padre;
+        this.madre=madre;
+        this.generacion=generacion;
     }
 
     //CONSTRUCTOR COPIA
@@ -28,6 +34,9 @@ public class Gato extends Mascota {
         this.nombre = gato.nombre;
         this.propietario = gato.propietario;
         this.sexo=gato.sexo;
+        this.padre=gato.padre;
+        this.madre=gato.madre;
+        this.generacion=gato.generacion;
     }
 
 
@@ -44,7 +53,7 @@ public class Gato extends Mascota {
 
     @Override
     protected Gato clone() {
-        return new Gato(this.raza,this.propietario,this.propietario,this.sexo);
+        return new Gato(this.raza,this.propietario,this.propietario,this.sexo, this.padre, this.madre, this.generacion);
     }
 
     @Override
@@ -57,7 +66,20 @@ public class Gato extends Mascota {
                 ", Nombre='" + nombre + '\'' +
                 ", Propietario='" + propietario + '\'' +
                 ", Sexo='" + sexo + '\'' +
+                ", Padre='" + padre + '\'' +
+                ", Madre='" + madre + '\'' +
+                ", Generacion='" + generacion + '\'' +
                 '}';
+    }
+
+    //GETTERS
+    @Override
+    public Gato getPadre() {
+        return padre;
+    }
+    @Override
+    public Gato getMadre() {
+        return madre;
     }
 
 }

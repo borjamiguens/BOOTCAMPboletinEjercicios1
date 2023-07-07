@@ -7,8 +7,11 @@ import org.example.ejercicio_09.clases.Tipo;
 
 public class Perro extends Mascota {
 
+    protected Perro padre;
+    protected Perro madre;
+
     //CONSTRUCTORES
-    public Perro(String raza, String nombre, String propietario, Sexo sexo) {
+    public Perro(String raza, String nombre, String propietario, Sexo sexo, Perro padre, Perro madre, int generacion) {
         this.reino = Reino.MAMIFERO;
         this.tipo = Tipo.PERRO;
         this.raza = raza;
@@ -16,6 +19,9 @@ public class Perro extends Mascota {
         this.nombre = nombre;
         this.propietario = propietario;
         this.sexo = sexo;
+        this.padre=padre;
+        this.madre=madre;
+        this.generacion=generacion;
     }
 
     //CONSTRUCTOR COPIA
@@ -27,6 +33,9 @@ public class Perro extends Mascota {
         this.nombre = perro.nombre;
         this.propietario = perro.propietario;
         this.sexo=perro.sexo;
+        this.padre=perro.padre;
+        this.madre=perro.madre;
+        this.generacion=perro.generacion;
     }
 
     //METODOS
@@ -42,7 +51,7 @@ public class Perro extends Mascota {
 
     @Override
     protected Perro clone() {
-        return new Perro(this.raza,this.nombre,this.propietario,this.sexo);
+        return new Perro(this.raza,this.nombre,this.propietario,this.sexo, this.padre, this.madre, this.generacion);
     }
 
 
@@ -56,7 +65,20 @@ public class Perro extends Mascota {
                 ", Nombre='" + nombre + '\'' +
                 ", Propietario='" + propietario + '\'' +
                 ", Sexo='" + sexo + '\'' +
+                ", Padre='" + padre + '\'' +
+                ", Madre='" + madre + '\'' +
+                ", Generacion='" + generacion + '\'' +
                 '}';
+    }
+
+    //GETTERS
+    @Override
+    public Perro getPadre() {
+        return padre;
+    }
+    @Override
+    public Perro getMadre() {
+        return madre;
     }
 
 }

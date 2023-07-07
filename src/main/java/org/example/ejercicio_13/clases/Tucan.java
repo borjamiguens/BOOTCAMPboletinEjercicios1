@@ -10,8 +10,11 @@ import org.example.ejercicio_13.clases.AnimalSalvaje;
 
 public class Tucan extends AnimalSalvaje {
 
+    protected Tucan padre;
+    protected Tucan madre;
+
     //CONSTRUCTORES
-    public Tucan(String raza, Sexo sexo) {
+    public Tucan(String raza, Sexo sexo, Tucan padre, Tucan madre, int generacion) {
         this.reino = Reino.AVE;
         this.tipo = Tipo.TUCAN;
         this.raza = raza;
@@ -41,7 +44,7 @@ public class Tucan extends AnimalSalvaje {
 
     @Override
     protected Tucan clone() {
-        return new Tucan(this.raza,this.sexo);
+        return new Tucan(this.raza,this.sexo, this.padre, this.madre, this.generacion);
     }
 
     @Override
@@ -52,7 +55,20 @@ public class Tucan extends AnimalSalvaje {
                 ", Raza='" + raza + '\'' +
                 ", Medio='" + medio + '\'' +
                 ", Sexo='" + sexo + '\'' +
+                ", Padre='" + padre + '\'' +
+                ", Madre='" + madre + '\'' +
+                ", Generacion='" + generacion + '\'' +
                 '}';
+    }
+
+    //GETTERS
+    @Override
+    public Tucan getPadre() {
+        return padre;
+    }
+    @Override
+    public Tucan getMadre() {
+        return madre;
     }
 }
 

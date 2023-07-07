@@ -19,6 +19,10 @@ public abstract class Animal implements ISexual {
     protected String raza;
     protected Medio medio;
     protected Sexo sexo;
+    protected Animal padre;
+    protected Animal madre;
+
+    protected int generacion;
 
 
     //METODOS
@@ -33,6 +37,7 @@ public abstract class Animal implements ISexual {
                 ", Tipo='" + tipo + '\'' +
                 ", Raza='" + raza + '\'' +
                 ", Medio='" + medio + '\'' +
+                ", Generacion='" + generacion + '\'' +
                 '}';
     }
 
@@ -52,6 +57,19 @@ public abstract class Animal implements ISexual {
 
     public Medio getMedio() {
         return medio;
+    }
+
+
+    public Animal getPadre() {
+        return padre;
+    }
+
+    public Animal getMadre() {
+        return madre;
+    }
+
+    public int getGeneracion() {
+        return generacion;
     }
 
     @Override

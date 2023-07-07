@@ -4,7 +4,7 @@ import org.example.ejercicio_09.clases.Sexo;
 
 public class Zoo_ej13 {
     public static void creaAmimalesEj13(){
-        Perro perro1=new Perro("Bulldog","Chucho","Juan", Sexo.MACHO);
+        /*Perro perro1=new Perro("Bulldog","Chucho","Juan", Sexo.MACHO);
         Perro perro2=new Perro(perro1);
         Gato gato1=new Gato("angora","Micho","Maria",Sexo.MACHO);
         Gato gato2=new Gato(gato1);
@@ -36,7 +36,7 @@ public class Zoo_ej13 {
         System.out.println("Tucan1");
         tucan1.reproducirSonido();
         tucan1.desplazarse();
-        System.out.println();
+        System.out.println();*/
 
 
 

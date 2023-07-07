@@ -7,8 +7,11 @@ import org.example.ejercicio_09.clases.Tipo;
 
 public class PezPayaso extends AnimalSalvaje {
 
+    protected PezPayaso padre;
+    protected PezPayaso madre;
+
     //CONSTRUCTORES
-    public PezPayaso(String raza, Sexo sexo) {
+    public PezPayaso(String raza, Sexo sexo, PezPayaso padre, PezPayaso madre, int generacion) {
         this.reino = Reino.PEZ;
         this.tipo = Tipo.PEZ_PAYASO;
         this.raza = raza;
@@ -38,7 +41,7 @@ public class PezPayaso extends AnimalSalvaje {
 
     @Override
     protected PezPayaso clone() {
-        return new PezPayaso(this.raza,this.sexo);
+        return new PezPayaso(this.raza,this.sexo, this.padre, this.madre, this.generacion);
     }
 
 
@@ -50,6 +53,18 @@ public class PezPayaso extends AnimalSalvaje {
                 ", Raza='" + raza + '\'' +
                 ", Medio='" + medio + '\'' +
                 ", Sexo='" + sexo + '\'' +
+                ", Padre='" + padre + '\'' +
+                ", Madre='" + madre + '\'' +
+                ", Generacion='" + generacion + '\'' +
                 '}';
+    }
+
+    //GETTERS
+    public PezPayaso getPadre() {
+        return padre;
+    }
+
+    public PezPayaso getMadre() {
+        return madre;
     }
 }
