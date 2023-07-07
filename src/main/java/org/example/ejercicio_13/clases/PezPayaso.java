@@ -2,16 +2,18 @@ package org.example.ejercicio_13.clases;
 
 import org.example.ejercicio_09.clases.Medio;
 import org.example.ejercicio_09.clases.Reino;
+import org.example.ejercicio_09.clases.Sexo;
 import org.example.ejercicio_09.clases.Tipo;
 
 public class PezPayaso extends AnimalSalvaje {
 
     //CONSTRUCTORES
-    public PezPayaso(String raza) {
+    public PezPayaso(String raza, Sexo sexo) {
         this.reino = Reino.PEZ;
         this.tipo = Tipo.PEZ_PAYASO;
         this.raza = raza;
         this.medio = Medio.ACUATICO;
+        this.sexo=sexo;
     }
 
     //CONSTRUCTOR COPIA
@@ -20,6 +22,7 @@ public class PezPayaso extends AnimalSalvaje {
         this.tipo = Tipo.PEZ_PAYASO;
         this.raza = pezPayaso.raza;
         this.medio = Medio.ACUATICO;
+        this.sexo=pezPayaso.sexo;
     }
 
     //METODOS
@@ -35,7 +38,7 @@ public class PezPayaso extends AnimalSalvaje {
 
     @Override
     protected PezPayaso clone() {
-        return new PezPayaso(this.raza);
+        return new PezPayaso(this.raza,this.sexo);
     }
 
 
@@ -46,6 +49,7 @@ public class PezPayaso extends AnimalSalvaje {
                 ", Tipo='" + tipo + '\'' +
                 ", Raza='" + raza + '\'' +
                 ", Medio='" + medio + '\'' +
+                ", Sexo='" + sexo + '\'' +
                 '}';
     }
 }

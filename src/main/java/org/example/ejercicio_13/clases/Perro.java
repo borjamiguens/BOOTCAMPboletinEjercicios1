@@ -2,18 +2,20 @@ package org.example.ejercicio_13.clases;
 
 import org.example.ejercicio_09.clases.Medio;
 import org.example.ejercicio_09.clases.Reino;
+import org.example.ejercicio_09.clases.Sexo;
 import org.example.ejercicio_09.clases.Tipo;
 
 public class Perro extends Mascota {
 
     //CONSTRUCTORES
-    public Perro(String raza, String nombre, String propietario) {
+    public Perro(String raza, String nombre, String propietario, Sexo sexo) {
         this.reino = Reino.MAMIFERO;
         this.tipo = Tipo.PERRO;
         this.raza = raza;
         this.medio = Medio.TERRESTRE;
         this.nombre = nombre;
         this.propietario = propietario;
+        this.sexo = sexo;
     }
 
     //CONSTRUCTOR COPIA
@@ -24,6 +26,7 @@ public class Perro extends Mascota {
         this.medio = Medio.TERRESTRE;
         this.nombre = perro.nombre;
         this.propietario = perro.propietario;
+        this.sexo=perro.sexo;
     }
 
     //METODOS
@@ -39,7 +42,7 @@ public class Perro extends Mascota {
 
     @Override
     protected Perro clone() {
-        return new Perro(this.raza,this.nombre,this.propietario);
+        return new Perro(this.raza,this.nombre,this.propietario,this.sexo);
     }
 
 
@@ -52,6 +55,7 @@ public class Perro extends Mascota {
                 ", Medio='" + medio + '\'' +
                 ", Nombre='" + nombre + '\'' +
                 ", Propietario='" + propietario + '\'' +
+                ", Sexo='" + sexo + '\'' +
                 '}';
     }
 

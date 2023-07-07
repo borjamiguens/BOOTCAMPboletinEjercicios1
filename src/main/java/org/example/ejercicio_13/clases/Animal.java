@@ -4,10 +4,11 @@ import org.example.ejercicio_09.clases.Medio;
 import org.example.ejercicio_09.clases.Reino;
 import org.example.ejercicio_09.clases.Sexo;
 import org.example.ejercicio_09.clases.Tipo;
+import org.example.ejercicio_14.clases.ISexual;
 
 import java.util.ArrayList;
 
-public abstract class Animal {
+public abstract class Animal implements ISexual {
 
     //ATRIBUTOS
     public static ArrayList<Animal> listaAnimales = new ArrayList<>();
@@ -17,6 +18,7 @@ public abstract class Animal {
     protected Tipo tipo;
     protected String raza;
     protected Medio medio;
+    protected Sexo sexo;
 
 
     //METODOS
@@ -52,4 +54,13 @@ public abstract class Animal {
         return medio;
     }
 
+    @Override
+    public Sexo getSexo() {
+        return sexo;
+    }
+
+    @Override
+    public void setSexo(Sexo sexo) {
+        this.sexo = sexo;
+    }
 }

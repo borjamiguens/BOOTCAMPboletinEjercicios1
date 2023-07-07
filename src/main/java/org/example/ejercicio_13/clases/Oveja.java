@@ -2,18 +2,20 @@ package org.example.ejercicio_13.clases;
 
 import org.example.ejercicio_09.clases.Medio;
 import org.example.ejercicio_09.clases.Reino;
+import org.example.ejercicio_09.clases.Sexo;
 import org.example.ejercicio_09.clases.Tipo;
 
 public class Oveja extends AnimalGranja {
 
     //CONSTRUCTORES
 
-    public Oveja(String raza, String propietario) {
+    public Oveja(String raza, String propietario, Sexo sexo) {
         this.reino = Reino.MAMIFERO;
         this.tipo = Tipo.OVEJA;
         this.raza = raza;
         this.medio = Medio.TERRESTRE;
         this.propietario = propietario;
+        this.sexo=sexo;
     }
 
     public Oveja(Oveja oveja) {
@@ -22,6 +24,7 @@ public class Oveja extends AnimalGranja {
         this.raza = oveja.raza;
         this.medio = Medio.TERRESTRE;
         this.propietario = oveja.propietario;
+        this.sexo=oveja.sexo;
     }
 
 
@@ -38,7 +41,7 @@ public class Oveja extends AnimalGranja {
 
     @Override
     protected Oveja clone() {
-        return new Oveja(this.raza, this.propietario);
+        return new Oveja(this.raza, this.propietario,this.sexo);
     }
 
     @Override
@@ -49,6 +52,7 @@ public class Oveja extends AnimalGranja {
                 ", Raza='" + raza + '\'' +
                 ", Medio='" + medio + '\'' +
                 ", Propietario='" + propietario + '\'' +
+                ", Sexo='" + sexo + '\'' +
                 '}';
     }
 }
