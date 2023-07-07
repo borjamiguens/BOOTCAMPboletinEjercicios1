@@ -51,6 +51,7 @@ public class Vaca extends AnimalGranja {
                 ", Raza='" + raza + '\'' +
                 ", Medio='" + medio + '\'' +
                 ", Propietario='" + propietario + '\'' +
+                ", Sexo='" + sexo + '\'' +
                 '}';
     }
 
