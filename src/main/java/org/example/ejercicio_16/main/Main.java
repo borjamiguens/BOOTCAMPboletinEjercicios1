@@ -6,7 +6,7 @@ public class Main {
     public static void main(String[] args) {
 
         Zoo.creaAnimales();
-        Zoo.iterarAnimales();
+        Zoo.criarAnimales();
 
     }
 }

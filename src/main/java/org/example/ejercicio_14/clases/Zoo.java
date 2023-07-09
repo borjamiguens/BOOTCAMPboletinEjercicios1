@@ -69,7 +69,7 @@ public class Zoo {
         listaAnimales.add(vaca3);
     }
 
-    public static void iterarAnimales() {
+    public static void criarAnimales() {
         //iterar hasta que el numero de animales hasta un máximo de generaciones
         int generacion = 1;
         do {
