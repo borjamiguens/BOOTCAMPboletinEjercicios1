@@ -69,80 +69,88 @@ public class Zoo {
         listaAnimales.add(vaca3);
     }
 
-        public static void iterarAnimales(){
-            //iterar hasta que el numero de animales hasta un máximo de generaciones
-            int generacion = 1;
-            do {
+    public static void iterarAnimales() {
+        //iterar hasta que el numero de animales hasta un máximo de generaciones
+        int generacion = 1;
+        do {
 
-                //realizar una copia de la tabla
-                ArrayList<Animal> listaAnimalesCria = new ArrayList<>();
-                for (int i = listaAnimales.size() - 1; i >= 0; i--) {//para cada elemento
-                    //para cada animal de la lista vamos a buscar en el resto de posiciones
-                    //animales suitables para tener hijos, misma clase y distinto sexo
-                    int m;
-                    int p;
-                    for (int j = i - 1; j >= 0; j--) {//comprobar combinaciones
+            //realizar una copia de la tabla
+            ArrayList<Animal> listaAnimalesCria = new ArrayList<>();
+            for (int i = listaAnimales.size() - 1; i >= 0; i--) {//para cada elemento
+                //para cada animal de la lista vamos a buscar en el resto de posiciones
+                //animales suitables para tener hijos, misma clase y distinto sexo
+                int m;
+                int p;
+                for (int j = i - 1; j >= 0; j--) {//comprobar combinaciones
 
-                        //en el siguiente orden
-                        //si los candidatos son de la misma especie y distinto sexo
-                        //y si las madres y los padres de los candidatos son distintos o si son de la primera generación(porque sus padres serin iguales a null)
-                        //y no son padre e hijo
-                        //y nos son madre e hijo
-                        //falta añadir la condicion de un hijo por pareja podemos probar con un arrayList de Hijos???
-                        if (
-                                ((listaAnimales.get(i)).getClass() == listaAnimales.get(j).getClass()) && (listaAnimales.get(i).getSexo() != listaAnimales.get(j).getSexo())
-                                        && ((listaAnimales.get(i).getPadre() != listaAnimales.get(j).getPadre() && listaAnimales.get(i).getMadre() != listaAnimales.get(j).getMadre()) || (listaAnimales.get(i).getGeneracion() == 0 && listaAnimales.get(j).getGeneracion() == 0))
-                                        && (listaAnimales.get(i).getPadre() != listaAnimales.get(j) || listaAnimales.get(j).getPadre() != listaAnimales.get(i))
-                                        && (listaAnimales.get(i).getMadre() != listaAnimales.get(j) || listaAnimales.get(j).getMadre() != listaAnimales.get(i))
-                        ) {
-                            //System.out.println("animal suitable para procrear" + listaAnimales.get(i).toString() + " con " + listaAnimales.get(j).toString());
+                    //referencias para optimizar codigo
+                    Animal animalI = listaAnimales.get(i);
+                    Animal animalJ = listaAnimales.get(j);
+                    //en el siguiente orden
+                    //si los candidatos son de la misma especie y distinto sexo
+                    //y si las madres y los padres de los candidatos son distintos o si son de la primera generación(porque sus padres serin iguales a null)
+                    //y no son padre e hijo
+                    //y nos son madre e hijo
+                    //falta añadir la condicion de un hijo por pareja podemos probar con un arrayList de Hijos???
+                    if (
+                            ((animalI).getClass() == animalJ.getClass()) && (animalI.getSexo() != animalJ.getSexo())
+                                    && ((animalI.getPadre() != animalJ.getPadre() && animalI.getMadre() != animalJ.getMadre()) || (animalI.getGeneracion() == 0 && animalJ.getGeneracion() == 0))
+                                    && (animalI.getPadre() != animalJ || animalJ.getPadre() != animalI)
+                                    && (animalI.getMadre() != animalJ || animalJ.getMadre() != animalI)
+                    ) {
+                        //System.out.println("animal suitable para procrear" + listaAnimales.get(i).toString() + " con " + listaAnimales.get(j).toString());
 
-                            //discernir si madre/padre es la j o la i, es decir, si la hembra/macho es el animal del for i o del j m es la madre y p es el padre
-                            if (listaAnimales.get(i).getSexo() == Sexo.HEMBRA) {
-                                m = i;
-                                p = j;
-                            } else {
-                                m = j;
-                                p = i;
-                            }
-                            if (listaAnimales.get(i).getTipo().equals(Tipo.PERRO)) {
-                                listaAnimalesCria.add(new Perro("", "", "", Sexo.MACHO, (Perro)listaAnimales.get(p), (Perro)listaAnimales.get(m), generacion));//un perro macho tendra un hijo con cada perra(2)
-                                /*listaAnimalesCria.add(new Perro("", "", "", Sexo.HEMBRA, listaAnimales.get(p), listaAnimales.get(m), generacion));*/
-                            } else if (listaAnimales.get(i).getTipo().equals(Tipo.GATO)) {
-                                listaAnimalesCria.add(new Gato("", "", "", Sexo.MACHO, (Gato) listaAnimales.get(p), (Gato)listaAnimales.get(m), generacion));
-                                /*listaAnimalesCria.add(new Gato("", "", "", Sexo.HEMBRA, listaAnimales.get(p), listaAnimales.get(m), generacion));*/
-                            } else if (listaAnimales.get(i).getTipo().equals(Tipo.TUCAN)) {
-                                listaAnimalesCria.add(new Tucan("",  Sexo.MACHO, (Tucan) listaAnimales.get(p), (Tucan) listaAnimales.get(m), generacion));
-                            } else if (listaAnimales.get(i).getTipo().equals(Tipo.PEZ_PAYASO)) {
-                                listaAnimalesCria.add(new PezPayaso("",  Sexo.MACHO, (PezPayaso) listaAnimales.get(p),(PezPayaso) listaAnimales.get(m), generacion));
-                            } else if (listaAnimales.get(i).getTipo().equals(Tipo.OVEJA)) {
-                                listaAnimalesCria.add(new Oveja("","", Sexo.MACHO,(Oveja) listaAnimales.get(p),(Oveja)  listaAnimales.get(m), generacion));
-                            } else if (listaAnimales.get(i).getTipo().equals(Tipo.VACA)) {
-                                listaAnimalesCria.add(new Vaca("","", Sexo.MACHO, (Vaca) listaAnimales.get(p),(Vaca) listaAnimales.get(m), generacion));
-                            }
+                        //discernir si madre/padre es la j o la i, es decir, si la hembra/macho es el animal del for i o del j m es la madre y p es el padre
+                        if (animalI.getSexo() == Sexo.HEMBRA) {//el animal del bucle i/j es el padre(p) o madre(m)
+                            m = i;
+                            p = j;
+
+                        } else {
+                            m = j;
+                            p = i;
                         }
-                        /*listaAnimales.add(new Perro());*/
+
+                        Animal animalM = listaAnimales.get(m);
+                        Animal animalP = listaAnimales.get(p);
+
+                        if (animalI.getTipo().equals(Tipo.PERRO)) {
+                            listaAnimalesCria.add(new Perro("", "", "", Sexo.MACHO, (Perro) animalP, (Perro) animalM, generacion));//un perro macho tendra un hijo con cada perra(2)
+                            /*listaAnimalesCria.add(new Perro("", "", "", Sexo.HEMBRA, listaAnimales.get(p), listaAnimales.get(m), generacion));*/
+                        } else if (animalI.getTipo().equals(Tipo.GATO)) {
+                            listaAnimalesCria.add(new Gato("", "", "", Sexo.MACHO, (Gato) animalP, (Gato) animalM, generacion));
+                            /*listaAnimalesCria.add(new Gato("", "", "", Sexo.HEMBRA, listaAnimales.get(p), listaAnimales.get(m), generacion));*/
+                        } else if (animalI.getTipo().equals(Tipo.TUCAN)) {
+                            listaAnimalesCria.add(new Tucan("", Sexo.MACHO, (Tucan) animalP, (Tucan) animalM, generacion));
+                        } else if (animalI.getTipo().equals(Tipo.PEZ_PAYASO)) {
+                            listaAnimalesCria.add(new PezPayaso("", Sexo.MACHO, (PezPayaso) animalP, (PezPayaso) animalM, generacion));
+                        } else if (animalI.getTipo().equals(Tipo.OVEJA)) {
+                            listaAnimalesCria.add(new Oveja("", "", Sexo.MACHO, (Oveja) animalP, (Oveja) animalM, generacion));
+                        } else if (animalI.getTipo().equals(Tipo.VACA)) {
+                            listaAnimalesCria.add(new Vaca("", "", Sexo.MACHO, (Vaca) animalP, (Vaca) animalM, generacion));
+                        }
                     }
-                    //al finalizar el for volcar los datos generados a la tabla original
+                    /*listaAnimales.add(new Perro());*/
                 }
+                //al finalizar el for volcar los datos generados a la tabla original
+            }
             /*for (Animal e : listaAnimalesCopia) {
                 System.out.println(e.toString());
             }*/
-                for (Animal e : listaAnimalesCria) {//añado las crias a la listaAnimales
-                    listaAnimales.add(e);
-                }
+            for (Animal e : listaAnimalesCria) {//añado las crias a la listaAnimales
+                listaAnimales.add(e);
+            }
             /*for (Animal e : listaAnimalesCria) {
                 System.out.println(e.toString());
             }*/
 
-                generacion++;
-            } while (generacion < 6);/*"mientras el numero de animales sea distinto al bucle anterior generacion<4*/
+            generacion++;
+        } while (generacion < 6);/*"mientras el numero de animales sea distinto al bucle anterior generacion<4*/
 
-            for (Animal e : listaAnimales) {
-                System.out.println(e.toString());
-            }
-            System.out.println(listaAnimales.size());
-
+        for (Animal e : listaAnimales) {
+            System.out.println(e.toString());
         }
+        System.out.println(listaAnimales.size());
+
+    }
 
 }
