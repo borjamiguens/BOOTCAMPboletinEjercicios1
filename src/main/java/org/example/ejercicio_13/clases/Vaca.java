@@ -22,6 +22,7 @@ public class Vaca extends AnimalGranja {
         this.padre=padre;
         this.madre=madre;
         this.generacion=generacion;
+        this.id=generarId();
     }
 
     public Vaca(Vaca vaca) {
@@ -34,6 +35,7 @@ public class Vaca extends AnimalGranja {
         this.padre=vaca.padre;
         this.madre=vaca.madre;
         this.generacion=vaca.generacion;
+        this.id=generarId();
     }
 
     //METODOS
@@ -55,6 +57,7 @@ public class Vaca extends AnimalGranja {
     @Override
     public String toString() {
         return "Vaca{" +
+                "Id='" + id + '\'' +
                 "Reino='" + reino + '\'' +
                 ", Tipo='" + tipo + '\'' +
                 ", Raza='" + raza + '\'' +

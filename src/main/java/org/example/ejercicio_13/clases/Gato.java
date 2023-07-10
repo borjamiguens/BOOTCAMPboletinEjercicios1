@@ -23,6 +23,7 @@ public class Gato extends Mascota {
         this.padre=padre;
         this.madre=madre;
         this.generacion=generacion;
+        this.id=generarId();
     }
 
     //CONSTRUCTOR COPIA
@@ -37,6 +38,7 @@ public class Gato extends Mascota {
         this.padre=gato.padre;
         this.madre=gato.madre;
         this.generacion=gato.generacion;
+        this.id=generarId();
     }
 
 
@@ -59,6 +61,7 @@ public class Gato extends Mascota {
     @Override
     public String toString() {
         return "Gato{" +
+                "Id='" + id + '\'' +
                 "Reino='" + reino + '\'' +
                 ", Tipo='" + tipo + '\'' +
                 ", Raza='" + raza + '\'' +

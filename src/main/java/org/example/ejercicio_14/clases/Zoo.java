@@ -71,7 +71,7 @@ public class Zoo {
 
     public static void criarAnimales(int numeroGeneraciones) {
         //iterar hasta que el numero de animales hasta un máximo de generaciones
-        int generacion = 1;
+        int generacion = 0;
         do {
 
             //realizar una copia de la tabla

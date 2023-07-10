@@ -20,6 +20,7 @@ public class Tucan extends AnimalSalvaje {
         this.raza = raza;
         this.medio = Medio.AEREO;
         this.sexo= sexo;
+        this.id=generarId();
     }
 
     //CONSTRUCTOR COPIA
@@ -29,6 +30,7 @@ public class Tucan extends AnimalSalvaje {
         this.raza = tucan.raza;
         this.medio = Medio.AEREO;
         this.sexo=tucan.sexo;
+        this.id=generarId();
     }
 
     //METODOS
@@ -50,6 +52,7 @@ public class Tucan extends AnimalSalvaje {
     @Override
     public String toString() {
         return "Tucan{" +
+                "Id='" + id + '\'' +
                 "Reino='" + reino + '\'' +
                 ", Tipo='" + tipo + '\'' +
                 ", Raza='" + raza + '\'' +

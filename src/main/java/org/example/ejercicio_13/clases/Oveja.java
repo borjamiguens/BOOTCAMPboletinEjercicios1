@@ -21,7 +21,9 @@ public class Oveja extends AnimalGranja {
         this.sexo = sexo;
         this.padre=padre;
         this.madre=madre;
-        this.generacion=generacion;    }
+        this.generacion=generacion;
+        this.id=generarId();
+    }
 
     public Oveja(Oveja oveja) {
         this.reino = Reino.MAMIFERO;
@@ -33,6 +35,7 @@ public class Oveja extends AnimalGranja {
         this.padre=oveja.padre;
         this.madre=oveja.madre;
         this.generacion=oveja.generacion;
+        this.id=generarId();
     }
 
 
@@ -55,6 +58,7 @@ public class Oveja extends AnimalGranja {
     @Override
     public String toString() {
         return "Oveja{" +
+                "Id='" + id + '\'' +
                 "Reino='" + reino + '\'' +
                 ", Tipo='" + tipo + '\'' +
                 ", Raza='" + raza + '\'' +

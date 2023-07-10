@@ -10,10 +10,13 @@ import java.util.ArrayList;
 
 public abstract class Animal implements ISexual {
 
-    //ATRIBUTOS
     public static ArrayList<Animal> listaAnimales = new ArrayList<>();
+    public static int contId=0;
+
+    //ATRIBUTOS
 
 
+    protected int id;
     protected Reino reino;
     protected Tipo tipo;
     protected String raza;
@@ -21,18 +24,21 @@ public abstract class Animal implements ISexual {
     protected Sexo sexo;
     protected Animal padre;
     protected Animal madre;
-
     protected int generacion;
 
 
     //METODOS
     protected abstract void reproducirSonido();
+
     protected abstract void desplazarse();
+
+
 
 
     @Override
     public String toString() {
         return "Animal{" +
+                "Id='" + id + '\'' +
                 "Reino='" + reino + '\'' +
                 ", Tipo='" + tipo + '\'' +
                 ", Raza='" + raza + '\'' +
@@ -43,6 +49,12 @@ public abstract class Animal implements ISexual {
 
 
     //GETTERS
+
+
+    public Integer getId() {
+        return id;
+    }
+
     public Reino getReino() {
         return reino;
     }
@@ -80,5 +92,9 @@ public abstract class Animal implements ISexual {
     @Override
     public void setSexo(Sexo sexo) {
         this.sexo = sexo;
+    }
+
+    public int generarId() {
+        return  contId++;
     }
 }

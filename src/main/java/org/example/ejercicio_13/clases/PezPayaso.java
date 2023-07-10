@@ -17,6 +17,7 @@ public class PezPayaso extends AnimalSalvaje {
         this.raza = raza;
         this.medio = Medio.ACUATICO;
         this.sexo=sexo;
+        this.id=generarId();
     }
 
     //CONSTRUCTOR COPIA
@@ -26,6 +27,7 @@ public class PezPayaso extends AnimalSalvaje {
         this.raza = pezPayaso.raza;
         this.medio = Medio.ACUATICO;
         this.sexo=pezPayaso.sexo;
+        this.id=generarId();
     }
 
     //METODOS
@@ -48,6 +50,7 @@ public class PezPayaso extends AnimalSalvaje {
     @Override
     public String toString() {
         return "Pez Payaso{" +
+                "Id='" + id + '\'' +
                 "Reino='" + reino + '\'' +
                 ", Tipo='" + tipo + '\'' +
                 ", Raza='" + raza + '\'' +

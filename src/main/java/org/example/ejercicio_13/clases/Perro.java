@@ -22,6 +22,7 @@ public class Perro extends Mascota {
         this.padre=padre;
         this.madre=madre;
         this.generacion=generacion;
+        this.id=generarId();
     }
 
     //CONSTRUCTOR COPIA
@@ -36,6 +37,7 @@ public class Perro extends Mascota {
         this.padre=perro.padre;
         this.madre=perro.madre;
         this.generacion=perro.generacion;
+        this.id=generarId();
     }
 
     //METODOS
@@ -58,6 +60,7 @@ public class Perro extends Mascota {
     @Override
     public String toString() {
         return "Perro{" +
+                "Id='" + id + '\'' +
                 "Reino='" + reino + '\'' +
                 ", Tipo='" + tipo + '\'' +
                 ", Raza='" + raza + '\'' +
