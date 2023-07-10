@@ -69,7 +69,7 @@ public class Zoo {
         listaAnimales.add(vaca3);
     }
 
-    public static void criarAnimales() {
+    public static void criarAnimales(int numeroGeneraciones) {
         //iterar hasta que el numero de animales hasta un máximo de generaciones
         int generacion = 1;
         do {
@@ -144,7 +144,7 @@ public class Zoo {
             }*/
 
             generacion++;
-        } while (false);/*"mientras el numero de animales sea distinto al bucle anterior generacion<4*/
+        } while (generacion < numeroGeneraciones);/*"mientras el numero de animales sea distinto al bucle anterior generacion<4*/
 
         for (Animal e : listaAnimales) {
             System.out.println(e.toString());
