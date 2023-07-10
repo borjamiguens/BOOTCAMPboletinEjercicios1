@@ -22,6 +22,7 @@ public abstract class Mascota extends Animal implements IPropietario {
     public String getPropietario() {
         return propietario;
     }
+
     @Override
     public void setPropietario(String propietario) {
         this.propietario=propietario;
