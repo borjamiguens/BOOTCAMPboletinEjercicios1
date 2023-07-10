@@ -65,6 +65,7 @@ public class Fichero {
 
         } catch (Exception e) {
             e.printStackTrace();
+            
         } finally {
             try {
                 if (file1 != null) {
