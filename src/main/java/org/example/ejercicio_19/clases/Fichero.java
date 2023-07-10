@@ -5,9 +5,7 @@ import org.example.ejercicio_13.clases.Animal;
 import org.example.ejercicio_13.clases.AnimalGranja;
 import org.example.ejercicio_13.clases.Mascota;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.PrintWriter;
+import java.io.*;
 
 import static org.example.ejercicio_13.clases.Animal.listaAnimales;
 
@@ -65,7 +63,7 @@ public class Fichero {
 
         } catch (Exception e) {
             e.printStackTrace();
-            
+
         } finally {
             try {
                 if (file1 != null) {
@@ -76,6 +74,30 @@ public class Fichero {
             }
         }
 
+    }
+
+    public static void readFile(){
+        BufferedReader br=null;
+
+        try{
+            br=new BufferedReader(new FileReader(new File("D:\\BOOTCAMP\\archivoPrueba.csv")));
+            String linea="";
+            while ((linea=br.readLine()) !=null){
+                System.out.println(linea);
+            }
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+        finally {
+            try{
+                if(null!=br){
+                    br.close();
+                }
+            } catch (Exception e2){
+                e2.printStackTrace();
+            }
+        }
     }
 
 }
