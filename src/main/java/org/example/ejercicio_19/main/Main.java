@@ -11,7 +11,7 @@ import java.io.PrintWriter;
 public class Main {
     public static void main(String[] args) throws IOException {
         Zoo.creaAnimales();
-        Zoo.criarAnimales(1);
+        Zoo.criarAnimales(3);
         Fichero.createFile();
     }
 }
