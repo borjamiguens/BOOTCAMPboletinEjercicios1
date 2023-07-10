@@ -144,7 +144,7 @@ public class Zoo {
             }*/
 
             generacion++;
-        } while (generacion < 6);/*"mientras el numero de animales sea distinto al bucle anterior generacion<4*/
+        } while (false);/*"mientras el numero de animales sea distinto al bucle anterior generacion<4*/
 
         for (Animal e : listaAnimales) {
             System.out.println(e.toString());
