@@ -89,6 +89,38 @@ public abstract class Animal implements ISexual {
         return sexo;
     }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setReino(Reino reino) {
+        this.reino = reino;
+    }
+
+    public void setTipo(Tipo tipo) {
+        this.tipo = tipo;
+    }
+
+    public void setRaza(String raza) {
+        this.raza = raza;
+    }
+
+    public void setMedio(Medio medio) {
+        this.medio = medio;
+    }
+
+    public void setPadre(Animal padre) {
+        this.padre = padre;
+    }
+
+    public void setMadre(Animal madre) {
+        this.madre = madre;
+    }
+
+    public void setGeneracion(int generacion) {
+        this.generacion = generacion;
+    }
+
     @Override
     public void setSexo(Sexo sexo) {
         this.sexo = sexo;

@@ -4,8 +4,10 @@ import org.example.ejercicio_09.clases.Reino;
 import org.example.ejercicio_13.clases.Animal;
 import org.example.ejercicio_13.clases.AnimalGranja;
 import org.example.ejercicio_13.clases.Mascota;
+import org.example.ejercicio_13.clases.Perro;
 
 import java.io.*;
+import java.util.Arrays;
 
 import static org.example.ejercicio_13.clases.Animal.listaAnimales;
 
@@ -78,12 +80,21 @@ public class Fichero {
 
     public static void readFile(){
         BufferedReader br=null;
-
+        listaAnimales.clear();
         try{
             br=new BufferedReader(new FileReader(new File("D:\\BOOTCAMP\\archivoPrueba.csv")));
             String linea="";
+            int i=0;
             while ((linea=br.readLine()) !=null){
-                System.out.println(linea);
+                /*System.out.println(linea);*/
+                /*listaAnimales.get(i)*/
+
+                String [] campo = linea.split(",");
+                /*System.out.println(Arrays.toString(campo));*/
+                //intentar convertir los datos string a los tipos correspondientes en los argumentos de constructor
+                Perro perro1=new Perro(campo[3],campo[5],null,null,null,null,0);
+                listaAnimales.add(perro1);
+                i++;
             }
         }
         catch (Exception e){
@@ -97,6 +108,9 @@ public class Fichero {
             } catch (Exception e2){
                 e2.printStackTrace();
             }
+        }
+        for(Animal e : listaAnimales){
+            System.out.println(e.toString());
         }
     }
 
