@@ -17,7 +17,7 @@ public abstract class Mascota extends Animal implements IPropietario {
 
     //CONSTRUCTORES
     public Mascota(Reino reino, Tipo tipo, String raza, Medio medio,String nombre, String propietario, Sexo sexo, Mascota padre, Mascota madre, int generacion) {
-        super(reino, tipo, raza,medio, padre, madre, generacion);
+        super(reino, tipo, raza,medio,sexo, padre, madre, generacion);
         this.nombre=nombre;
         this.propietario=propietario;
 

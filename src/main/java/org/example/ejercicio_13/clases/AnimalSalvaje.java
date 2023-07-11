@@ -14,7 +14,7 @@ public abstract class AnimalSalvaje extends Animal {
 
     //CONSTRUCTORES
     public AnimalSalvaje(Reino reino, Tipo tipo, String raza, Medio medio, Sexo sexo, AnimalSalvaje padre, AnimalSalvaje madre, int generacion) {
-        super(reino, tipo, raza, medio, padre, madre, generacion);
+        super(reino, tipo, raza, medio, sexo, padre, madre, generacion);
     }
 
     //CONSTRUCTOR COPIA

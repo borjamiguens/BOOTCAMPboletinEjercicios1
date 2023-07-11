@@ -12,7 +12,7 @@ public class Vaca extends AnimalGranja {
 
     //CONSTRUCTORES
     public Vaca(String raza,String propietario, Sexo sexo, Vaca padre, Vaca madre, int generacion) {
-        super(Reino.MAMIFERO,Tipo.OVEJA, raza,Medio.TERRESTRE,propietario,sexo,padre, madre, generacion);
+        super(Reino.MAMIFERO,Tipo.VACA, raza,Medio.TERRESTRE,propietario,sexo,padre, madre, generacion);
     }
 
     //CONSTRUCTOR COPIA

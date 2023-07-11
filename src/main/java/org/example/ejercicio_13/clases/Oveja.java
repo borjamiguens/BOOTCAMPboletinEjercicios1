@@ -10,8 +10,8 @@ public class Oveja extends AnimalGranja {
     protected Oveja padre;
     protected Oveja madre;
     //CONSTRUCTORES
-    public Oveja(String raza,String propietario, Sexo sexo, Oveja padre, Oveja madre, int generacion) {
-        super(Reino.MAMIFERO,Tipo.OVEJA, raza,Medio.TERRESTRE,propietario,sexo,padre, madre, generacion);
+    public Oveja(String raza,String propietario,Sexo sexo,  Oveja padre, Oveja madre, int generacion) {
+        super(Reino.MAMIFERO,Tipo.OVEJA, raza,Medio.TERRESTRE, propietario, sexo,padre, madre, generacion);
     }
 
     //CONSTRUCTOR COPIA

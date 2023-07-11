@@ -27,7 +27,7 @@ public abstract class Animal implements ISexual {
     protected int generacion;
 
     //CONSTRUCTORES
-    public Animal(Reino reino, Tipo tipo, String raza, Medio medio, Animal padre, Animal madre, int generacion) {
+    public Animal(Reino reino, Tipo tipo, String raza, Medio medio, Sexo sexo, Animal padre, Animal madre, int generacion) {
         this.reino = reino;
         this.tipo = tipo;
         this.raza = raza;

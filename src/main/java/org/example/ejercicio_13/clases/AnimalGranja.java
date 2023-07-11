@@ -18,7 +18,7 @@ public abstract class AnimalGranja extends Animal implements IPropietario {
 
     //CONSTRUCTORES
     public AnimalGranja(Reino reino, Tipo tipo, String raza, Medio medio, String propietario, Sexo sexo, AnimalGranja padre, AnimalGranja madre, int generacion) {
-        super(reino, tipo, raza, medio, padre, madre, generacion);
+        super(reino, tipo, raza, medio,sexo, padre, madre, generacion);
         this.propietario=propietario;
     }
 
