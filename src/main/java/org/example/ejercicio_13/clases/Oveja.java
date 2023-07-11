@@ -9,35 +9,15 @@ public class Oveja extends AnimalGranja {
 
     protected Oveja padre;
     protected Oveja madre;
-
     //CONSTRUCTORES
-
-    public Oveja(String raza, String propietario, Sexo sexo, Oveja padre, Oveja madre, int generacion) {
-        this.reino = Reino.MAMIFERO;
-        this.tipo = Tipo.OVEJA;
-        this.raza = raza;
-        this.medio = Medio.TERRESTRE;
-        this.propietario = propietario;
-        this.sexo = sexo;
-        this.padre=padre;
-        this.madre=madre;
-        this.generacion=generacion;
-        this.id=generarId();
+    public Oveja(String raza,String propietario, Sexo sexo, Oveja padre, Oveja madre, int generacion) {
+        super(Reino.MAMIFERO,Tipo.OVEJA, raza,Medio.TERRESTRE,propietario,sexo,padre, madre, generacion);
     }
 
+    //CONSTRUCTOR COPIA
     public Oveja(Oveja oveja) {
-        this.reino = Reino.MAMIFERO;
-        this.tipo = Tipo.OVEJA;
-        this.raza = oveja.raza;
-        this.medio = Medio.TERRESTRE;
-        this.propietario = oveja.propietario;
-        this.sexo=oveja.sexo;
-        this.padre=oveja.padre;
-        this.madre=oveja.madre;
-        this.generacion=oveja.generacion;
-        this.id=generarId();
+        super(oveja);
     }
-
 
     //METODOS
     @Override
@@ -55,29 +35,7 @@ public class Oveja extends AnimalGranja {
         return new Oveja(this.raza, this.propietario,this.sexo,this.padre, this.madre, this.generacion);
     }
 
-    @Override
-    public String toString() {
-        return "Oveja{" +
-                "Id='" + id + '\'' +
-                "Reino='" + reino + '\'' +
-                ", Tipo='" + tipo + '\'' +
-                ", Raza='" + raza + '\'' +
-                ", Medio='" + medio + '\'' +
-                ", Propietario='" + propietario + '\'' +
-                ", Sexo='" + sexo + '\'' +
-                ", Padre='" + padre + '\'' +
-                ", Madre='" + madre + '\'' +
-                ", Generacion='" + generacion + '\'' +
-                '}';
-    }
-
     //GETTERS
-    @Override
-    public Oveja getPadre() {
-        return padre;
-    }
-    @Override
-    public Oveja getMadre() {
-        return madre;
-    }
+
+
 }

@@ -12,22 +12,13 @@ public class PezPayaso extends AnimalSalvaje {
 
     //CONSTRUCTORES
     public PezPayaso(String raza, Sexo sexo, PezPayaso padre, PezPayaso madre, int generacion) {
-        this.reino = Reino.PEZ;
-        this.tipo = Tipo.PEZ_PAYASO;
-        this.raza = raza;
-        this.medio = Medio.ACUATICO;
-        this.sexo=sexo;
-        this.id=generarId();
+        super(Reino.PEZ,Tipo.PEZ_PAYASO, raza,Medio.ACUATICO,sexo,padre, madre, generacion);
     }
+
 
     //CONSTRUCTOR COPIA
     public PezPayaso(PezPayaso pezPayaso) {
-        this.reino = Reino.PEZ;
-        this.tipo = Tipo.PEZ_PAYASO;
-        this.raza = pezPayaso.raza;
-        this.medio = Medio.ACUATICO;
-        this.sexo=pezPayaso.sexo;
-        this.id=generarId();
+        super(pezPayaso);
     }
 
     //METODOS
@@ -47,20 +38,6 @@ public class PezPayaso extends AnimalSalvaje {
     }
 
 
-    @Override
-    public String toString() {
-        return "Pez Payaso{" +
-                "Id='" + id + '\'' +
-                "Reino='" + reino + '\'' +
-                ", Tipo='" + tipo + '\'' +
-                ", Raza='" + raza + '\'' +
-                ", Medio='" + medio + '\'' +
-                ", Sexo='" + sexo + '\'' +
-                ", Padre='" + padre + '\'' +
-                ", Madre='" + madre + '\'' +
-                ", Generacion='" + generacion + '\'' +
-                '}';
-    }
 
     //GETTERS
     public PezPayaso getPadre() {

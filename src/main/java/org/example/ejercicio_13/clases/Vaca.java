@@ -11,31 +11,13 @@ public class Vaca extends AnimalGranja {
     protected Vaca madre;
 
     //CONSTRUCTORES
-
-    public Vaca(String raza, String propietario, Sexo sexo, Vaca padre, Vaca madre, int generacion) {
-        this.reino = Reino.MAMIFERO;
-        this.tipo = Tipo.VACA;
-        this.raza = raza;
-        this.medio = Medio.TERRESTRE;
-        this.propietario = propietario;
-        this.sexo=sexo;
-        this.padre=padre;
-        this.madre=madre;
-        this.generacion=generacion;
-        this.id=generarId();
+    public Vaca(String raza,String propietario, Sexo sexo, Vaca padre, Vaca madre, int generacion) {
+        super(Reino.MAMIFERO,Tipo.OVEJA, raza,Medio.TERRESTRE,propietario,sexo,padre, madre, generacion);
     }
 
+    //CONSTRUCTOR COPIA
     public Vaca(Vaca vaca) {
-        this.reino = Reino.MAMIFERO;
-        this.tipo = Tipo.VACA;
-        this.raza = vaca.raza;
-        this.medio = Medio.TERRESTRE;
-        this.propietario = vaca.propietario;
-        this.sexo=vaca.sexo;
-        this.padre=vaca.padre;
-        this.madre=vaca.madre;
-        this.generacion=vaca.generacion;
-        this.id=generarId();
+        super(vaca);
     }
 
     //METODOS
@@ -54,21 +36,7 @@ public class Vaca extends AnimalGranja {
         return new Vaca(this.raza, this.propietario, this.sexo,this.padre, this.madre, this.generacion);
     }
 
-    @Override
-    public String toString() {
-        return "Vaca{" +
-                "Id='" + id + '\'' +
-                "Reino='" + reino + '\'' +
-                ", Tipo='" + tipo + '\'' +
-                ", Raza='" + raza + '\'' +
-                ", Medio='" + medio + '\'' +
-                ", Propietario='" + propietario + '\'' +
-                ", Sexo='" + sexo + '\'' +
-                ", Padre='" + padre + '\'' +
-                ", Madre='" + madre + '\'' +
-                ", Generacion='" + generacion + '\'' +
-                '}';
-    }
+
 
     //GETTERS
     @Override

@@ -15,22 +15,13 @@ public class Tucan extends AnimalSalvaje {
 
     //CONSTRUCTORES
     public Tucan(String raza, Sexo sexo, Tucan padre, Tucan madre, int generacion) {
-        this.reino = Reino.AVE;
-        this.tipo = Tipo.TUCAN;
-        this.raza = raza;
-        this.medio = Medio.AEREO;
-        this.sexo= sexo;
-        this.id=generarId();
+        super(Reino.AVE,Tipo.TUCAN, raza,Medio.AEREO,sexo,padre, madre, generacion);
     }
+
 
     //CONSTRUCTOR COPIA
     public Tucan(Tucan tucan) {
-        this.reino = Reino.AVE;
-        this.tipo = Tipo.TUCAN;
-        this.raza = tucan.raza;
-        this.medio = Medio.AEREO;
-        this.sexo=tucan.sexo;
-        this.id=generarId();
+        super(tucan);
     }
 
     //METODOS
@@ -49,29 +40,9 @@ public class Tucan extends AnimalSalvaje {
         return new Tucan(this.raza,this.sexo, this.padre, this.madre, this.generacion);
     }
 
-    @Override
-    public String toString() {
-        return "Tucan{" +
-                "Id='" + id + '\'' +
-                "Reino='" + reino + '\'' +
-                ", Tipo='" + tipo + '\'' +
-                ", Raza='" + raza + '\'' +
-                ", Medio='" + medio + '\'' +
-                ", Sexo='" + sexo + '\'' +
-                ", Padre='" + padre + '\'' +
-                ", Madre='" + madre + '\'' +
-                ", Generacion='" + generacion + '\'' +
-                '}';
-    }
+
 
     //GETTERS
-    @Override
-    public Tucan getPadre() {
-        return padre;
-    }
-    @Override
-    public Tucan getMadre() {
-        return madre;
-    }
+
 }
 

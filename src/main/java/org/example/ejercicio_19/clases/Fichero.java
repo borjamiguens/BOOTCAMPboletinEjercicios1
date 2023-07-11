@@ -92,7 +92,7 @@ public class Fichero {
                 String [] campo = linea.split(",");
                 /*System.out.println(Arrays.toString(campo));*/
                 //intentar convertir los datos string a los tipos correspondientes en los argumentos de constructor
-                Perro perro1=new Perro(campo[3],campo[5],null,null,null,null,0);
+                Perro perro1=new Perro(campo[3],campo[5],campo[6],null,null,null,0);
                 listaAnimales.add(perro1);
                 i++;
             }

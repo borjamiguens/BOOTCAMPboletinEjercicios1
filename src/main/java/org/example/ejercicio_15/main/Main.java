@@ -17,14 +17,14 @@ public class Main {
         }*/
 
         for (Animal e : listaAnimales) {
-            if ((e instanceof Perro) || (e instanceof Gato)) {
-                listaMascotas.add(e);
+            if (e instanceof Mascota) {
+                listaMascotas.add((Mascota) e);
             }
-            if ((e instanceof Tucan) || (e instanceof PezPayaso)) {
-                listaAnimalesSalvajes.add(e);
+            if (e instanceof AnimalSalvaje) {
+                listaAnimalesSalvajes.add((AnimalSalvaje) e);
             }
-            if ((e instanceof Oveja) || (e instanceof Vaca)) {
-                listaAnimalesGranja.add(e);
+            if (e instanceof AnimalGranja) {
+                listaAnimalesGranja.add((AnimalGranja) e);
             }
         }
 

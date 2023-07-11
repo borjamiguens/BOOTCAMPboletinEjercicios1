@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public abstract class Animal implements ISexual {
 
     public static ArrayList<Animal> listaAnimales = new ArrayList<>();
-    public static int contId=0;
+    private static int contId=0;
 
     //ATRIBUTOS
 
@@ -26,6 +26,31 @@ public abstract class Animal implements ISexual {
     protected Animal madre;
     protected int generacion;
 
+    //CONSTRUCTORES
+    public Animal(Reino reino, Tipo tipo, String raza, Medio medio, Animal padre, Animal madre, int generacion) {
+        this.reino = reino;
+        this.tipo = tipo;
+        this.raza = raza;
+        this.medio = medio;
+        this.sexo = sexo;
+        this.padre=padre;
+        this.madre=madre;
+        this.generacion=generacion;
+        this.id=generarId();
+    }
+
+    //CONSTRUCTOR COPIA
+    public Animal(Animal animal) {
+        this.reino = animal.reino;
+        this.tipo = animal.tipo;
+        this.raza = animal.raza;
+        this.medio = animal.medio;
+        this.sexo=animal.sexo;
+        this.padre=animal.padre;
+        this.madre=animal.madre;
+        this.generacion=animal.generacion;
+        this.id=generarId();
+    }
 
     //METODOS
     protected abstract void reproducirSonido();
@@ -85,6 +110,11 @@ public abstract class Animal implements ISexual {
     }
 
     @Override
+    public void setSexo(Sexo sexo) {
+        this.sexo = sexo;
+    }
+
+    @Override
     public Sexo getSexo() {
         return sexo;
     }
@@ -121,10 +151,7 @@ public abstract class Animal implements ISexual {
         this.generacion = generacion;
     }
 
-    @Override
-    public void setSexo(Sexo sexo) {
-        this.sexo = sexo;
-    }
+
 
     public int generarId() {
         return  contId++;

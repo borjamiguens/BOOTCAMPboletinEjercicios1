@@ -5,6 +5,6 @@ import org.example.ejercicio_14.clases.Zoo;
 public class Main {
     public static void main(String[] args) {
         Zoo.creaAnimales();
-        Zoo.criarAnimales(1);
+        Zoo.criarAnimales(5);
     }
 }

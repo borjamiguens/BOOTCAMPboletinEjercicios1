@@ -13,32 +13,12 @@ public class Gato extends Mascota {
 
     //CONSTRUCTORES
     public Gato(String raza, String nombre, String propietario, Sexo sexo, Gato padre, Gato madre, int generacion) {
-        this.reino = Reino.MAMIFERO;
-        this.tipo = Tipo.GATO;
-        this.raza = raza;
-        this.medio = Medio.TERRESTRE;
-        this.nombre = nombre;
-        this.propietario = propietario;
-        this.sexo=sexo;
-        this.padre=padre;
-        this.madre=madre;
-        this.generacion=generacion;
-        this.id=generarId();
+        super(Reino.MAMIFERO,Tipo.GATO, raza,Medio.TERRESTRE,nombre,propietario,sexo,padre, madre, generacion);
     }
 
     //CONSTRUCTOR COPIA
     public Gato(Gato gato) {
-        this.reino = Reino.MAMIFERO;
-        this.tipo = Tipo.GATO;
-        this.raza = gato.raza;
-        this.medio = Medio.TERRESTRE;
-        this.nombre = gato.nombre;
-        this.propietario = gato.propietario;
-        this.sexo=gato.sexo;
-        this.padre=gato.padre;
-        this.madre=gato.madre;
-        this.generacion=gato.generacion;
-        this.id=generarId();
+        super(gato);
     }
 
 
@@ -58,22 +38,7 @@ public class Gato extends Mascota {
         return new Gato(this.raza,this.propietario,this.propietario,this.sexo, this.padre, this.madre, this.generacion);
     }
 
-    @Override
-    public String toString() {
-        return "Gato{" +
-                "Id='" + id + '\'' +
-                "Reino='" + reino + '\'' +
-                ", Tipo='" + tipo + '\'' +
-                ", Raza='" + raza + '\'' +
-                ", Medio='" + medio + '\'' +
-                ", Nombre='" + nombre + '\'' +
-                ", Propietario='" + propietario + '\'' +
-                ", Sexo='" + sexo + '\'' +
-                ", Padre='" + padre + '\'' +
-                ", Madre='" + madre + '\'' +
-                ", Generacion='" + generacion + '\'' +
-                '}';
-    }
+
 
     //GETTERS
     @Override
@@ -85,5 +50,9 @@ public class Gato extends Mascota {
         return madre;
     }
 
+    @Override
+    public void setSexo(Sexo sexo) {
+
+    }
 }
 

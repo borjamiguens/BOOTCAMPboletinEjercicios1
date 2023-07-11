@@ -12,32 +12,13 @@ public class Perro extends Mascota {
 
     //CONSTRUCTORES
     public Perro(String raza, String nombre, String propietario, Sexo sexo, Perro padre, Perro madre, int generacion) {
-        this.reino = Reino.MAMIFERO;
-        this.tipo = Tipo.PERRO;
-        this.raza = raza;
-        this.medio = Medio.TERRESTRE;
-        this.nombre = nombre;
-        this.propietario = propietario;
-        this.sexo = sexo;
-        this.padre=padre;
-        this.madre=madre;
-        this.generacion=generacion;
-        this.id=generarId();
+        super(Reino.MAMIFERO,Tipo.PERRO, raza,Medio.TERRESTRE,nombre,propietario,sexo,padre, madre, generacion);
     }
+
 
     //CONSTRUCTOR COPIA
     public Perro(Perro perro) {
-        this.reino = Reino.MAMIFERO;
-        this.tipo = Tipo.PERRO;
-        this.raza = perro.raza;
-        this.medio = Medio.TERRESTRE;
-        this.nombre = perro.nombre;
-        this.propietario = perro.propietario;
-        this.sexo=perro.sexo;
-        this.padre=perro.padre;
-        this.madre=perro.madre;
-        this.generacion=perro.generacion;
-        this.id=generarId();
+        super(perro);
     }
 
     //METODOS
@@ -57,23 +38,6 @@ public class Perro extends Mascota {
     }
 
 
-    @Override
-    public String toString() {
-        return "Perro{" +
-                "Id='" + id + '\'' +
-                "Reino='" + reino + '\'' +
-                ", Tipo='" + tipo + '\'' +
-                ", Raza='" + raza + '\'' +
-                ", Medio='" + medio + '\'' +
-                ", Nombre='" + nombre + '\'' +
-                ", Propietario='" + propietario + '\'' +
-                ", Sexo='" + sexo + '\'' +
-                ", Padre='" + padre + '\'' +
-                ", Madre='" + madre + '\'' +
-                ", Generacion='" + generacion + '\'' +
-                '}';
-    }
-
     //GETTERS
     @Override
     public Perro getPadre() {
@@ -84,4 +48,8 @@ public class Perro extends Mascota {
         return madre;
     }
 
+    @Override
+    public void setSexo(Sexo sexo) {
+
+    }
 }
